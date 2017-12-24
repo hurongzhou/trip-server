@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 配置映射类的别名 -->
+    <typeAliases>
+        <typeAlias type="com.trip.entity.Admin" alias="Admin"/>
+        <typeAlias type="java.util.Map" alias="Map"/>
+        <typeAlias type="java.util.List" alias="List"/>
+        <typeAlias type="java.lang.String" alias="String"/>
+        <typeAlias type="java.lang.Integer" alias="Integer"/>
+
+    </typeAliases>
+
+    <!-- 配置Mapper文件的路径 -->
+</configuration>

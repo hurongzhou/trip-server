@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/com-trip-common/com-trip-common.iml" filepath="$PROJECT_DIR$/com-trip-common/com-trip-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com-trip-dao/com-trip-dao.iml" filepath="$PROJECT_DIR$/com-trip-dao/com-trip-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com-trip-entity/com-trip-entity.iml" filepath="$PROJECT_DIR$/com-trip-entity/com-trip-entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com-trip-service/com-trip-service.iml" filepath="$PROJECT_DIR$/com-trip-service/com-trip-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com-trip-web/com-trip-web.iml" filepath="$PROJECT_DIR$/com-trip-web/com-trip-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trip-server.iml" filepath="$PROJECT_DIR$/trip-server.iml" />
+    </modules>
+  </component>
+</project>

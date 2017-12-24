@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+    <context:annotation-config/>
+    <context:component-scan base-package="com.trip.daoImpl"/>
+    <context:component-scan base-package="com.trip.service"/>
+    <context:component-scan base-package="com.trip.mapper"/>
+
+
+    <!--主数据库的配置-->
+    <bean id="masterDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+        <property name="url" value="jdbc:mysql://localhost:3306/trip?characterEncoding=UTF-8"></property>
+        <property name="username" value="root"></property>
+        <property name="password" value="123456"></property>
+    </bean>
+
+    <!--从数据库的配置-->
+    <bean id="slaveDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+        <property name="url" value="jdbc:mysql://localhost:3306/library1?characterEncoding=UTF-8"></property>
+        <property name="username" value="root"></property>
+        <property name="password" value="123456"></property>
+    </bean>
+
+    <!--配置动态数据源-->
+    <!--<bean id="dataSource" class="com.uestc.library.common.DynamicDatasource">-->
+        <!--&lt;!&ndash; 设置多个数据源 &ndash;&gt;-->
+        <!--<property name="targetDataSources">-->
+            <!--<map key-type="java.lang.String">-->
+                <!--&lt;!&ndash; 这个key需要和DynamicDatasourceHolder的key一致 &ndash;&gt;-->
+                <!--<entry key="master" value-ref="masterDataSource"/>-->
+                <!--<entry key="slave" value-ref="slaveDataSource"/>-->
+            <!--</map>-->
+        <!--</property>-->
+        <!--&lt;!&ndash; 设置默认的数据源，这里默认走写库 &ndash;&gt;-->
+        <!--<property name="defaultTargetDataSource" ref="masterDataSource"/>-->
+    <!--</bean>-->
+
+    <!-- 定义事务管理器 -->
+    <bean id="transactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="masterDataSource" />
+    </bean>
+    <!-- 定义事务策略 -->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <!--定义查询方法都是只读的 -->
+            <tx:method name="query*" read-only="true" />
+            <tx:method name="find*" read-only="true" />
+            <tx:method name="get*" read-only="true" />
+
+            <!-- 主库执行操作，事务传播行为定义为默认行为 -->
+            <tx:method name="save*" propagation="REQUIRED" />
+            <tx:method name="update*" propagation="REQUIRED" />
+            <tx:method name="delete*" propagation="REQUIRED" />
+
+            <!--其他方法使用默认事务策略 -->
+            <tx:method name="*" />
+        </tx:attributes>
+    </tx:advice>
+
+    <!-- 定义AOP切面处理器 -->
+    <!--<bean class="com.uestc.library.common.DatasourceAspect" id="dataSourceAspect" />-->
+
+    <!--<aop:config>-->
+        <!--&lt;!&ndash; 定义切面，所有service的所有类的所有方法 &ndash;&gt;-->
+        <!--<aop:pointcut id="txPointcut" expression="execution(* com.uestc.library.daoImpl.*.*(..))" />-->
+        <!--&lt;!&ndash; 应用事务策略到Service切面 &ndash;&gt;-->
+        <!--<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>-->
+        <!--&lt;!&ndash; 将切面应用到自定义的切面处理器上，-9999保证该切面优先级最高执行 &ndash;&gt;-->
+        <!--<aop:aspect ref="dataSourceAspect" order="-9999">-->
+            <!--<aop:before method="before" pointcut-ref="txPointcut" />-->
+        <!--</aop:aspect>-->
+    <!--</aop:config>-->
+
+    <!--<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">-->
+        <!--<property name="dataSource" ref="dataSource"/>-->
+    <!--</bean>-->
+    <!--<tx:advice id="txAdvice" transaction-manager="txManager">-->
+        <!--<tx:attributes>-->
+            <!--<tx:method name="insert*" propagation="REQUIRED"></tx:method>-->
+            <!--<tx:method name="delete*" propagation="REQUIRED"></tx:method>-->
+            <!--<tx:method name="update*" propagation="REQUIRED"></tx:method>-->
+            <!--<tx:method name="select*" propagation="SUPPORTS"></tx:method>-->
+        <!--</tx:attributes>-->
+    <!--</tx:advice>-->
+    <!--<aop:config>-->
+    <!--<aop:pointcut id="serviceCut" expression="execution(public * service.*.*(..))" />-->
+    <!--<aop:advisor pointcut-ref="serviceCut" advice-ref=""/>-->
+    <!--</aop:config>-->
+
+    <!--mybatis的配置-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="masterDataSource"/>
+        <property name="configLocation" value="classpath:mybatis.xml"></property>
+        <property name="mapperLocations" value="classpath:mapping/*.xml"/>
+    </bean>
+
+    <!--指定mapper-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+        <property name="basePackage" value="com.trip.mapper"></property>
+    </bean>
+
+</beans>
