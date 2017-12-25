@@ -1,12 +1,11 @@
-package com.trip.mapper;
+package com.trip.dao;
 
 import com.trip.entity.User;
 
 import java.util.List;
 import java.util.Map;
 
-public interface UserMapper {
-
+public interface UserDao {
     int deleteByPrimaryKey(Integer userId);
 
     int insert(User record);

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.trip.mapper.AdminMapper" >
   <resultMap id="BaseResultMap" type="com.trip.entity.Admin" >
-    <id column="a_id" property="aId" jdbcType="INTEGER" />
+    <id column="admin_id" property="aId" jdbcType="INTEGER" />
     <result column="login_name" property="loginName" jdbcType="VARCHAR" />
     <result column="password" property="password" jdbcType="VARCHAR" />
     <result column="email" property="email" jdbcType="VARCHAR" />
@@ -10,20 +10,20 @@
     <result column="exp_content" property="expContent" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    a_id, login_name, password, email, content, exp_content
+    admin_id, login_name, password, email, content, exp_content
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
-    from admin
+    from tb_admin
     where a_id = #{aId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from admin
+    delete from tb_admin
     where a_id = #{aId,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.trip.entity.Admin" >
-    insert into admin (a_id, login_name, password, 
+    insert into tb_admin (a_id, login_name, password,
       email, content, exp_content
       )
     values (#{aId,jdbcType=INTEGER}, #{loginName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
@@ -31,7 +31,7 @@
       )
   </insert>
   <insert id="insertSelective" parameterType="com.trip.entity.Admin" >
-    insert into admin
+    insert into tb_admin
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="aId != null" >
         a_id,
@@ -74,7 +74,7 @@
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.trip.entity.Admin" >
-    update admin
+    update tb_admin
     <set >
       <if test="loginName != null" >
         login_name = #{loginName,jdbcType=VARCHAR},
@@ -95,7 +95,7 @@
     where a_id = #{aId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.trip.entity.Admin" >
-    update admin
+    update tb_admin
     set login_name = #{loginName,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},
       email = #{email,jdbcType=VARCHAR},
@@ -105,6 +105,6 @@
   </update>
 
   <select id="login" parameterType="Map" resultMap="BaseResultMap">
-    select * from admin where login_name=#{loginName} and password=#{password}
+    select * from tb_admin where login_name=#{loginName} and password=#{password}
   </select>
 </mapper>

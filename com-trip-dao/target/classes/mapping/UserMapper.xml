@@ -17,23 +17,26 @@
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
-    from user
+    from tb_user
     where user_id = #{userId,jdbcType=INTEGER}
   </select>
+  <select id="selectAll" resultMap="BaseResultMap" resultType="List">
+    select * from tb_user
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from user
+    delete from tb_user
     where user_id = #{userId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.trip.entity.User" >
-    insert into user (user_id, login_name, password, 
+  <insert id="insert" useGeneratedKeys="true" keyProperty="userId" parameterType="com.trip.entity.User" >
+    insert into tb_user (user_id, login_name, password,
       email, tel, nickname, 
       exp_content1, exp_content2)
     values (#{userId,jdbcType=INTEGER}, #{loginName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
       #{email,jdbcType=VARCHAR}, #{tel,jdbcType=VARCHAR}, #{nickname,jdbcType=VARCHAR}, 
       #{expContent1,jdbcType=VARCHAR}, #{expContent2,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.trip.entity.User" >
-    insert into user
+  <insert id="insertSelective" useGeneratedKeys="true" keyProperty="userId" parameterType="com.trip.entity.User" >
+    insert into tb_user
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="userId != null" >
         user_id,
@@ -87,8 +90,9 @@
       </if>
     </trim>
   </insert>
+
   <update id="updateByPrimaryKeySelective" parameterType="com.trip.entity.User" >
-    update user
+    update tb_user
     <set >
       <if test="loginName != null" >
         login_name = #{loginName,jdbcType=VARCHAR},
@@ -115,7 +119,7 @@
     where user_id = #{userId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.trip.entity.User" >
-    update user
+    update tb_user
     set login_name = #{loginName,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},
       email = #{email,jdbcType=VARCHAR},
@@ -125,4 +129,8 @@
       exp_content2 = #{expContent2,jdbcType=VARCHAR}
     where user_id = #{userId,jdbcType=INTEGER}
   </update>
+
+  <select id="login" parameterType="Map" resultMap="BaseResultMap">
+    select * from tb_user where login_name=#{loginName} and password=#{password}
+  </select>
 </mapper>
