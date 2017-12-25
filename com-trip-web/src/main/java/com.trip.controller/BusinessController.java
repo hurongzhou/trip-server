@@ -37,6 +37,7 @@ public class BusinessController {
             Business business=businessService.login(param);
             if (business!=null){
                 request.getSession().setAttribute("business",business);
+                api.setResult(business);
                 api.setMassage("登录成功！");
                 api.setStatus(APITripResult.SUCCESS);
             }else {
