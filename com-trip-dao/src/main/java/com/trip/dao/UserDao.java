@@ -21,4 +21,6 @@ public interface UserDao {
     int updateByPrimaryKey(User record);
 
     User login(Map<String,Object> param);
+
+
 }
