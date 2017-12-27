@@ -76,10 +76,11 @@ public class UserController {
         try {
             users=userService.queryAll();
             api.setResult(users);
+            int a=1/0;
             api.setMassage("操作成功！");
             api.setStatus(APITripResult.SUCCESS);
         }catch (Exception e){
-            logger.error(e.getMessage());
+            logger.error("系统错误！{}",e);
             e.printStackTrace();
             api.setMassage(e.getMessage());
             api.setStatus(APITripResult.SYSTEM_ERROR);

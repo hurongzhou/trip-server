@@ -6,23 +6,47 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7c84b35-ded1-41a0-a072-42f8d6fd0ab0" name="Default" comment="添加动态数据源">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/dao/UserDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-dao/target/classes/com/trip/dao/AdminDao.class" afterPath="$PROJECT_DIR$/com-trip-dao/target/classes/com/trip/dao/AdminDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-dao/target/classes/com/trip/dao/BusinessDao.class" afterPath="$PROJECT_DIR$/com-trip-dao/target/classes/com/trip/dao/BusinessDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-dao/target/classes/com/trip/daoImpl/AdminDaoImpl.class" afterPath="$PROJECT_DIR$/com-trip-dao/target/classes/com/trip/daoImpl/AdminDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-dao/target/classes/com/trip/daoImpl/BusinessDaoImpl.class" afterPath="$PROJECT_DIR$/com-trip-dao/target/classes/com/trip/daoImpl/BusinessDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-dao/target/classes/com/trip/mapper/AdminMapper.class" afterPath="$PROJECT_DIR$/com-trip-dao/target/classes/com/trip/mapper/AdminMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-dao/target/classes/com/trip/mapper/BusinessMapper.class" afterPath="$PROJECT_DIR$/com-trip-dao/target/classes/com/trip/mapper/BusinessMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-dao/target/classes/com/trip/mapper/UserMapper.class" afterPath="$PROJECT_DIR$/com-trip-dao/target/classes/com/trip/mapper/UserMapper.class" />
+    <list default="true" id="d7c84b35-ded1-41a0-a072-42f8d6fd0ab0" name="Default" comment="补充类">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/dao/DishesDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/daoImpl/DishesDaoImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/com-trip-dao/src/main/resources/mapping/DishesMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/com-trip-service/src/main/java/com/trip/service/DishesService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/com-trip-web/src/main/java/com.trip.controller/DishesController.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/dao/BusinessDao.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/daoImpl/BusinessDaoImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/mapper/BusinessMapper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/com-trip-dao/src/main/resources/mapping/BusinessMapper.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/com-trip-dao/target/classes/com/trip/dao/BusinessDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/com-trip-dao/target/classes/com/trip/daoImpl/BusinessDaoImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/com-trip-dao/target/classes/com/trip/mapper/BusinessMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/com-trip-dao/target/classes/mapping/BusinessMapper.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/com-trip-entity/src/main/java/com/trip/entity/Business.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/com-trip-entity/target/classes/com/trip/entity/Business.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/com-trip-service/src/main/java/com/trip/service/BusinessService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/com-trip-service/target/classes/com/trip/service/BusinessService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/com-trip-web/src/main/java/com.trip.controller/BusinessController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/com-trip-web/target/classes/com/trip/controller/BusinessController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/com-trip-web/target/com.trip.web/WEB-INF/classes/com/trip/controller/BusinessController.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-web/target/com.trip.web/WEB-INF/lib/com.trip.common-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/com-trip-web/target/com.trip.web/WEB-INF/lib/com.trip.common-1.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-web/target/com.trip.web/WEB-INF/lib/com.trip.dao-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/com-trip-web/target/com.trip.web/WEB-INF/lib/com.trip.dao-1.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-web/target/com.trip.web/WEB-INF/lib/com.trip.entity-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/com-trip-web/target/com.trip.web/WEB-INF/lib/com.trip.entity-1.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-web/target/com.trip.web/WEB-INF/lib/com.trip.service-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/com-trip-web/target/com.trip.web/WEB-INF/lib/com.trip.service-1.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-web/target/com.trip.web/WEB-INF/lib/com.trip.web-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/com-trip-web/target/com.trip.web/WEB-INF/lib/com.trip.web-1.0-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-dao/com-trip-dao.iml" afterPath="$PROJECT_DIR$/com-trip-dao/com-trip-dao.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/mapper/UserMapper.java" afterPath="$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/mapper/UserMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-dao/src/main/resources/mapping/AdminMapper.xml" afterPath="$PROJECT_DIR$/com-trip-dao/src/main/resources/mapping/AdminMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-dao/src/main/resources/mapping/BusinessMapper.xml" afterPath="$PROJECT_DIR$/com-trip-dao/src/main/resources/mapping/BusinessMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-dao/target/classes/mapping/AdminMapper.xml" afterPath="$PROJECT_DIR$/com-trip-dao/target/classes/mapping/AdminMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-dao/target/classes/mapping/BusinessMapper.xml" afterPath="$PROJECT_DIR$/com-trip-dao/target/classes/mapping/BusinessMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-common/src/main/java/com/trip/common/dynamic/DynamicDatasourceAspect.java" afterPath="$PROJECT_DIR$/com-trip-common/src/main/java/com/trip/common/dynamic/DynamicDatasourceAspect.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-common/src/main/resources/generator.xml" afterPath="$PROJECT_DIR$/com-trip-common/src/main/resources/generator.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-common/target/classes/generator.xml" afterPath="$PROJECT_DIR$/com-trip-common/target/classes/generator.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/dao/UserDao.java" afterPath="$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/dao/UserDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-dao/src/main/resources/mapping/UserMapper.xml" afterPath="$PROJECT_DIR$/com-trip-dao/src/main/resources/mapping/UserMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-dao/src/main/resources/mybatis.xml" afterPath="$PROJECT_DIR$/com-trip-dao/src/main/resources/mybatis.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-dao/target/classes/mapping/UserMapper.xml" afterPath="$PROJECT_DIR$/com-trip-dao/target/classes/mapping/UserMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-dao/target/classes/mybatis.xml" afterPath="$PROJECT_DIR$/com-trip-dao/target/classes/mybatis.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-web/src/main/java/com.trip.controller/UserController.java" afterPath="$PROJECT_DIR$/com-trip-web/src/main/java/com.trip.controller/UserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-web/src/main/resources/applicationContext.xml" afterPath="$PROJECT_DIR$/com-trip-web/src/main/resources/applicationContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-web/src/main/webapp/WEB-INF/logs/error.log" afterPath="$PROJECT_DIR$/com-trip-web/src/main/webapp/WEB-INF/logs/error.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-web/src/main/webapp/WEB-INF/logs/info.log" afterPath="$PROJECT_DIR$/com-trip-web/src/main/webapp/WEB-INF/logs/info.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-web/target/classes/applicationContext.xml" afterPath="$PROJECT_DIR$/com-trip-web/target/classes/applicationContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com-trip-web/target/com.trip.web/WEB-INF/classes/applicationContext.xml" afterPath="$PROJECT_DIR$/com-trip-web/target/com.trip.web/WEB-INF/classes/applicationContext.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -47,41 +71,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DynamicDatasource.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com-trip-common/src/main/java/com/trip/common/dynamic/DynamicDatasource.java">
+      <file leaf-file-name="DishesMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/mapper/DishesMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding>
-                <element signature="e#306#307#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DynamicDatasourceHolder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com-trip-common/src/main/java/com/trip/common/dynamic/DynamicDatasourceHolder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="55">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding>
-                <element signature="e#306#307#0" expanded="true" />
-                <element signature="e#358#359#0" expanded="true" />
-                <element signature="e#387#388#0" expanded="true" />
-                <element signature="e#425#426#0" expanded="true" />
-                <element signature="e#465#466#0" expanded="true" />
-                <element signature="e#502#503#0" expanded="true" />
-                <element signature="e#541#542#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DynamicDatasourceAspect.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com-trip-common/src/main/java/com/trip/common/dynamic/DynamicDatasourceAspect.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="58" lean-forward="false" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+            <state relative-caret-position="227">
+              <caret line="55" column="49" lean-forward="false" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,57 +83,53 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com-trip-web/src/main/resources/log4j.properties">
+      <file leaf-file-name="DishesController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/com-trip-web/src/main/java/com.trip.controller/DishesController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="31" column="90" lean-forward="true" selection-start-line="31" selection-start-column="90" selection-end-line="31" selection-end-column="90" />
+            <state relative-caret-position="116">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dishes.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/com-trip-entity/src/main/java/com/trip/entity/Dishes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com-trip-web/src/main/java/com.trip.controller/UserController.java">
+      <file leaf-file-name="DishesMapper.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/com-trip-dao/src/main/resources/mapping/DishesMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+            <state relative-caret-position="182">
+              <caret line="152" column="55" lean-forward="false" selection-start-line="152" selection-start-column="55" selection-end-line="152" selection-end-column="55" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="n#sql#0;n#mapper#0;n#!!top" expanded="false" />
+                <element signature="n#insert#0;n#mapper#0;n#!!top" expanded="false" />
+                <element signature="n#insert#1;n#mapper#0;n#!!top" expanded="false" />
+                <marker date="1514348855000" expanded="true" signature="1286:1404" ph="select from tb_dishes" />
+                <marker date="1514348855000" expanded="true" signature="1521:1586" ph="select from tb_dishes" />
+                <marker date="1514348855000" expanded="true" signature="2298:2370" ph="delete from " />
+                <marker date="1514348855000" expanded="true" signature="2646:3055" ph="insert into tb_dishes... " />
+                <marker date="1514348855000" expanded="true" signature="5062:5867" ph="update tb_di... " />
+                <marker date="1514348855000" expanded="true" signature="6155:6578" ph="update tb_di... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/daoImpl/UserDaoImpl.java">
+      <file leaf-file-name="GeneratorUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/com-trip-common/src/main/java/com/trip/common/GeneratorUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="39" column="37" lean-forward="false" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserMapper.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/mapper/UserMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="error.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com-trip-web/src/main/webapp/WEB-INF/logs/error.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="323">
+              <caret line="30" column="40" lean-forward="false" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -172,7 +162,6 @@
         <option value="$PROJECT_DIR$/com-trip-common/src/main/java/com/trip/common/GeneratorUtil.java" />
         <option value="$PROJECT_DIR$/com-trip-entity/src/main/java/com/trip/entity/Admin.java" />
         <option value="$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/mapper/AdminMapping.fxml" />
-        <option value="$PROJECT_DIR$/com-trip-dao/src/main/resources/mybatis.xml" />
         <option value="$PROJECT_DIR$/com-trip-dao/pom.xml" />
         <option value="$PROJECT_DIR$/com-trip-service/pom.xml" />
         <option value="$PROJECT_DIR$/com-trip-web/pom.xml" />
@@ -186,17 +175,13 @@
         <option value="$PROJECT_DIR$/com-trip-service/src/main/java/com/trip/service/AdminService.java" />
         <option value="$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/mapper/AdminMapper.java" />
         <option value="$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/mapper/AdminMapper.xml" />
-        <option value="$PROJECT_DIR$/com-trip-common/src/main/resources/generator.xml" />
         <option value="$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/dao/BusinessDao.java" />
         <option value="$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/daoImpl/BusinessDaoImpl.java" />
         <option value="$PROJECT_DIR$/com-trip-common/src/main/java/com/trip/common/APITripResult.java" />
         <option value="$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/mapper/BusinessMapper.java" />
         <option value="$PROJECT_DIR$/com-trip-service/src/main/java/com/trip/service/BusinessService.java" />
-        <option value="$PROJECT_DIR$/com-trip-entity/src/main/java/com/trip/entity/Business.java" />
         <option value="$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/mapper/UserMapper.java" />
-        <option value="$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/daoImpl/UserDaoImpl.java" />
-        <option value="$PROJECT_DIR$/com-trip-dao/src/main/resources/mapping/UserMapper.xml" />
         <option value="$PROJECT_DIR$/com-trip-service/src/main/java/com/trip/service/UserService.java" />
         <option value="$PROJECT_DIR$/com-trip-dao/src/main/resources/mapping/AdminMapper.xml" />
         <option value="$PROJECT_DIR$/com-trip-web/src/main/java/com.trip.controller/AdminController.java" />
@@ -205,12 +190,24 @@
         <option value="$PROJECT_DIR$/com-trip-common/src/main/java/com/trip/common/dynamic/DynamicDatasourceHolder.java" />
         <option value="$PROJECT_DIR$/com-trip-web/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/com-trip-common/src/main/java/com/trip/common/dynamic/DynamicDatasource.java" />
-        <option value="$PROJECT_DIR$/com-trip-common/src/main/java/com/trip/common/dynamic/DynamicDatasourceAspect.java" />
-        <option value="$PROJECT_DIR$/com-trip-web/src/main/resources/applicationContext.xml" />
         <option value="$PROJECT_DIR$/com-trip-web/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/com-trip-web/src/main/webapp/WEB-INF/logs/error.log" />
+        <option value="$PROJECT_DIR$/com-trip-web/src/main/resources/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/com-trip-common/src/main/java/com/trip/common/dynamic/DynamicDatasourceAspect.java" />
+        <option value="$PROJECT_DIR$/com-trip-dao/src/main/resources/mapping/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/com-trip-entity/src/main/java/com/trip/entity/Business.java" />
+        <option value="$PROJECT_DIR$/com-trip-common/src/main/resources/generator.xml" />
         <option value="$PROJECT_DIR$/com-trip-web/src/main/webapp/WEB-INF/logs/info.log" />
+        <option value="$PROJECT_DIR$/com-trip-dao/src/main/resources/mybatis.xml" />
         <option value="$PROJECT_DIR$/com-trip-web/src/main/java/com.trip.controller/UserController.java" />
+        <option value="$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/mapper/DishesMapper.java" />
+        <option value="$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/dao/DishesDao.java" />
+        <option value="$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/daoImpl/DishesDaoImpl.java" />
+        <option value="$PROJECT_DIR$/com-trip-service/src/main/java/com/trip/service/DishesService.java" />
+        <option value="$PROJECT_DIR$/com-trip-web/src/main/java/com.trip.controller/DishesController.java" />
+        <option value="$PROJECT_DIR$/com-trip-entity/src/main/java/com/trip/entity/Dishes.java" />
+        <option value="$PROJECT_DIR$/com-trip-dao/src/main/resources/mapping/DishesMapper.xml" />
+        <option value="$PROJECT_DIR$/com-trip-web/src/main/webapp/WEB-INF/logs/error.log" />
       </list>
     </option>
   </component>
@@ -266,10 +263,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -318,9 +315,7 @@
               <item name="com-trip-common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="dynamic" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="trip-server" type="b2602c69:ProjectViewProjectNode" />
@@ -398,6 +393,50 @@
             <path>
               <item name="trip-server" type="b2602c69:ProjectViewProjectNode" />
               <item name="trip-server" type="462c0819:PsiDirectoryNode" />
+              <item name="com-trip-dao" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapping" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trip-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trip-server" type="462c0819:PsiDirectoryNode" />
+              <item name="com-trip-entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trip-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trip-server" type="462c0819:PsiDirectoryNode" />
+              <item name="com-trip-entity" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trip-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trip-server" type="462c0819:PsiDirectoryNode" />
+              <item name="com-trip-entity" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trip-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trip-server" type="462c0819:PsiDirectoryNode" />
+              <item name="com-trip-entity" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trip-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trip-server" type="462c0819:PsiDirectoryNode" />
+              <item name="com-trip-entity" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trip-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trip-server" type="462c0819:PsiDirectoryNode" />
               <item name="com-trip-service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -471,6 +510,14 @@
               <item name="com-trip-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trip-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trip-server" type="462c0819:PsiDirectoryNode" />
+              <item name="com-trip-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -508,13 +555,13 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\ideaWorkspace\trip-server\trip-server\com-trip-dao\src\main\resources\mapping" />
-      <recent name="$PROJECT_DIR$/com-trip-dao/src/main/resources/mapping" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/com-trip-web/src/main/resources" />
       <recent name="$PROJECT_DIR$/com-trip-dao/src/main/resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/com-trip-dao/src/main/resources/mapping" />
+      <recent name="F:\ideaWorkspace\trip-server\trip-server\com-trip-dao\src\main\resources\mapping" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -530,79 +577,19 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Unnamed">
-    <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.82" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER" value="false" />
-      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
-      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
-      <deployment>
-        <artifact name="com-trip-web:war exploded">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_trip-server_2" />
-      </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+    <configuration name="Unnamed" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="49792" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method>
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="com-trip-web:war exploded" />
-        </option>
-      </method>
+      <option name="MAIN_CLASS_NAME" value="com.trip.common.GeneratorUtil" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="com-trip-common" />
+      <envs />
     </configuration>
     <configuration default="false" name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.82" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER" value="false" />
@@ -1118,7 +1105,8 @@
       <workItem from="1514006474732" duration="4826000" />
       <workItem from="1514011802132" duration="4566000" />
       <workItem from="1514081589890" duration="16632000" />
-      <workItem from="1514164990426" duration="11132000" />
+      <workItem from="1514164990426" duration="16120000" />
+      <workItem from="1514340967107" duration="6989000" />
     </task>
     <task id="LOCAL-00001" summary="添加动态数据源">
       <created>1514176294257</created>
@@ -1134,14 +1122,22 @@
       <option name="project" value="LOCAL" />
       <updated>1514176698034</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="补充类">
+      <created>1514176832909</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1514176832909</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37159000" />
+    <option name="totallyTimeSpent" value="49136000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="791" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="793" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54664487" sideWeight="0.5030534" order="7" side_tool="true" content_ui="tabs" />
@@ -1155,21 +1151,21 @@
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4665676" sideWeight="0.49694657" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16444445" sideWeight="0.49694657" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33878157" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33777776" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288889" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24068768" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24068768" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32838038" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1183,7 +1179,8 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54664487" sideWeight="0.5030534" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986626" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1194,22 +1191,22 @@
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47407407" sideWeight="0.49694657" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986626" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33878157" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986626" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288889" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25358167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24068768" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32838038" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
@@ -1230,7 +1227,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="添加动态数据源" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加动态数据源" />
+    <MESSAGE value="补充类" />
+    <option name="LAST_COMMIT_MESSAGE" value="补充类" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1243,69 +1241,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="21" lean-forward="false" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com-trip-common/src/main/java/com/trip/common/GeneratorUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="78" lean-forward="false" selection-start-line="21" selection-start-column="78" selection-end-line="21" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com-trip-common/src/main/resources/generator.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="73" lean-forward="false" selection-start-line="28" selection-start-column="73" selection-end-line="28" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com-trip-entity/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com-trip-common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com-trip-dao/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="39" lean-forward="false" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com-trip-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="39" lean-forward="false" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/mapper/AdminMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1324,27 +1259,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com-trip-dao/src/main/resources/mybatis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/com-trip-web/src/main/java/com.trip.controller/PayController.java" />
-    <entry file="file://$PROJECT_DIR$/com-trip-web/src/main/resources/dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-514">
-          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/com-trip-entity/src/main/java/com/trip/entity/Admin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1406,28 +1326,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2680">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com-trip-entity/src/main/java/com/trip/entity/User.java" />
-    <entry file="file://$PROJECT_DIR$/com-trip-common/src/main/java/com/trip/common/GeneratorUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="27" column="41" lean-forward="false" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com-trip-common/src/main/resources/generator.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="37" column="25" lean-forward="false" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/com-trip-common/src/main/java/com/trip/common/APITripResult.java" />
     <entry file="file://$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/dao/BusinessDao.java" />
     <entry file="file://$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/mapper/BusinessMapper.java" />
@@ -1439,46 +1342,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/daoImpl/BusinessDaoImpl.java" />
-    <entry file="file://$PROJECT_DIR$/com-trip-entity/src/main/java/com/trip/entity/Business.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.3.RELEASE/spring-web-4.3.3.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
           <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com-trip-dao/src/main/resources/mapping/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="37" column="56" lean-forward="false" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
-          <folding>
-            <element signature="n#resultMap#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#sql#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#select#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#select#1;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#delete#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#insert#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#insert#1;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#update#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#update#1;n#mapper#0;n#!!top" expanded="false" />
-            <marker date="1514168859000" expanded="true" signature="1041:1153" ph="select from tb_user" />
-            <marker date="1514168859000" expanded="true" signature="1240:1261" ph="select * fro... tb_user" />
-            <marker date="1514168859000" expanded="true" signature="1348:1414" ph="delete from " />
-            <marker date="1514168859000" expanded="true" signature="1537:1914" ph="insert into tb_user... " />
-            <marker date="1514168859000" expanded="true" signature="3512:4274" ph="update tb_us... " />
-            <marker date="1514168859000" expanded="true" signature="4364:4756" ph="update tb_us... " />
-            <marker date="1514168859000" expanded="true" signature="4842:4918" ph="select * fro... tb_user" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1500,52 +1367,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com-trip-web/src/main/java/com.trip.controller/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="39" column="19" lean-forward="false" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com-trip-web/src/main/java/com.trip.controller/BusinessController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="64" column="29" lean-forward="true" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com-trip-service/src/main/java/com/trip/service/BusinessService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com-trip-dao/src/main/resources/mapping/BusinessMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="114" column="83" lean-forward="false" selection-start-line="114" selection-start-column="83" selection-end-line="114" selection-end-column="83" />
-          <folding>
-            <element signature="n#resultMap#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#sql#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#insert#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#trim#0;n#insert#1;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#trim#1;n#insert#1;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#update#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#update#1;n#mapper#0;n#!!top" expanded="false" />
-            <marker date="1514170869000" expanded="true" signature="1344:1468" ph="select from business" />
-            <marker date="1514170869000" expanded="true" signature="1554:1632" ph="delete from " />
-            <marker date="1514170869000" expanded="true" signature="1713:2260" ph="insert into tb_business... " />
-            <marker date="1514170869000" expanded="true" signature="4316:5405" ph="update tb_bu... " />
-            <marker date="1514170869000" expanded="true" signature="5498:6067" ph="update tb_bu... " />
-            <marker date="1514170869000" expanded="true" signature="6153:6276" ph="select from tb_business" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/com-trip-service/src/main/java/com/trip/service/BusinessService.java" />
+    <entry file="file://$PROJECT_DIR$/com-trip-dao/src/main/resources/mapping/BusinessMapper.xml" />
     <entry file="file://$PROJECT_DIR$/com-trip-web/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="834">
@@ -1559,7 +1382,7 @@
         <state relative-caret-position="-106">
           <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1568,7 +1391,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="89">
           <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1576,15 +1398,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="55">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#306#307#0" expanded="true" />
-            <element signature="e#358#359#0" expanded="true" />
-            <element signature="e#387#388#0" expanded="true" />
-            <element signature="e#425#426#0" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
-            <element signature="e#502#503#0" expanded="true" />
-            <element signature="e#541#542#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1592,61 +1405,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#306#307#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com-trip-web/src/main/resources/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="73" column="102" lean-forward="true" selection-start-line="73" selection-start-column="102" selection-end-line="73" selection-end-column="102" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com-trip-common/src/main/java/com/trip/common/dynamic/DynamicDatasourceAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="58" lean-forward="false" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com-trip-web/src/main/webapp/WEB-INF/logs/error.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com-trip-web/src/main/webapp/WEB-INF/logs/info.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com-trip-web/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="31" column="90" lean-forward="true" selection-start-line="31" selection-start-column="90" selection-end-line="31" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com-trip-web/src/main/java/com.trip.controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1655,17 +1413,231 @@
         <state relative-caret-position="510">
           <caret line="39" column="37" lean-forward="false" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com-trip-common/src/main/java/com/trip/common/dynamic/DynamicDatasourceAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="97" lean-forward="false" selection-start-line="26" selection-start-column="97" selection-end-line="26" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com-trip-entity/src/main/java/com/trip/entity/Business.java" />
+    <entry file="file://$PROJECT_DIR$/com-trip-web/src/main/java/com.trip.controller/BusinessController.java" />
+    <entry file="file://$PROJECT_DIR$/com-trip-dao/src/main/resources/mapping/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="131" column="11" lean-forward="false" selection-start-line="131" selection-start-column="11" selection-end-line="131" selection-end-column="11" />
+          <folding>
+            <element signature="n#resultMap#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#sql#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#1;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#delete#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#insert#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#insert#1;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#update#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#update#1;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#2;n#mapper#0;n#!!top" expanded="false" />
+            <marker date="1514180964000" expanded="true" signature="1042:1154" ph="select from tb_user" />
+            <marker date="1514180964000" expanded="true" signature="1241:1262" ph="select * fro... tb_user" />
+            <marker date="1514180964000" expanded="true" signature="1349:1415" ph="delete from " />
+            <marker date="1514180964000" expanded="true" signature="1538:1915" ph="insert into tb_user... " />
+            <marker date="1514180964000" expanded="true" signature="3513:4275" ph="update tb_us... " />
+            <marker date="1514180964000" expanded="true" signature="4365:4757" ph="update tb_us... " />
+            <marker date="1514180964000" expanded="true" signature="4843:4919" ph="select * fro... tb_user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com-trip-common/src/main/java/com/trip/common/GeneratorUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="30" column="40" lean-forward="false" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/mapper/UserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="223">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com-trip-common/src/main/resources/generator.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="132" lean-forward="true" selection-start-line="24" selection-start-column="132" selection-end-line="24" selection-end-column="132" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com-trip-web/src/main/java/com.trip.controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="31" column="45" lean-forward="true" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com-trip-web/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="52" column="25" lean-forward="true" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com-trip-web/src/main/resources/dispatcher-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-60">
+          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com-trip-web/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="31" column="90" lean-forward="true" selection-start-line="31" selection-start-column="90" selection-end-line="31" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com-trip-web/src/main/webapp/WEB-INF/logs/info.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="399" column="51" lean-forward="false" selection-start-line="399" selection-start-column="51" selection-end-line="399" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com-trip-dao/src/main/resources/mapping/RestaurantMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com-trip-dao/src/main/resources/mybatis.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="73" lean-forward="false" selection-start-line="9" selection-start-column="73" selection-end-line="9" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com-trip-web/src/main/java/com.trip.controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="82" column="33" lean-forward="false" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/mapper/DishesMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="55" column="49" lean-forward="false" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/dao/DishesDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="49" lean-forward="false" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com-trip-dao/src/main/java/com/trip/daoImpl/DishesDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#413#414#0" expanded="false" />
+            <element signature="e#473#474#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com-trip-service/src/main/java/com/trip/service/DishesService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="45" lean-forward="false" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#324#325#0" expanded="true" />
+            <element signature="e#376#377#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com-trip-entity/src/main/java/com/trip/entity/Dishes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com-trip-web/src/main/java/com.trip.controller/DishesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com-trip-web/src/main/webapp/WEB-INF/logs/error.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com-trip-dao/src/main/resources/mapping/DishesMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="152" column="55" lean-forward="false" selection-start-line="152" selection-start-column="55" selection-end-line="152" selection-end-column="55" />
+          <folding>
+            <element signature="n#sql#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#insert#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#insert#1;n#mapper#0;n#!!top" expanded="false" />
+            <marker date="1514348855000" expanded="true" signature="1286:1404" ph="select from tb_dishes" />
+            <marker date="1514348855000" expanded="true" signature="1521:1586" ph="select from tb_dishes" />
+            <marker date="1514348855000" expanded="true" signature="2298:2370" ph="delete from " />
+            <marker date="1514348855000" expanded="true" signature="2646:3055" ph="insert into tb_dishes... " />
+            <marker date="1514348855000" expanded="true" signature="5062:5867" ph="update tb_di... " />
+            <marker date="1514348855000" expanded="true" signature="6155:6578" ph="update tb_di... " />
           </folding>
         </state>
       </provider>

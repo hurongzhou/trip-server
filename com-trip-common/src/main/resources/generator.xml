@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
-    <classPathEntry location="F:\ideaWorkspace\mysql-connector-java-5.1.32.jar" />
+    <classPathEntry location="/Users/hurong/workspace/mysql-connector-java-5.1.44-bin.jar" />
 
     <context id="Mysql2Tables" targetRuntime="MyBatis3">
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
@@ -17,22 +17,22 @@
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
 
-        <javaModelGenerator targetPackage="com.trip.entity" targetProject="F:\ideaWorkspace\trip-server\trip-server\com-trip-entity\src\main\java">
+        <javaModelGenerator targetPackage="com.trip.entity" targetProject="/Users/hurong/workspace/trip-server/com-trip-entity/src/main/java">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="resources.mapping"  targetProject="F:\ideaWorkspace\trip-server\trip-server\com-trip-dao\src\main">
+        <sqlMapGenerator targetPackage="resources.mapping"  targetProject="/Users/hurong/workspace/trip-server/com-trip-dao/src/main">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
 
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.trip.mapper"  targetProject="F:\ideaWorkspace\trip-server\trip-server\com-trip-dao\src\main\java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.trip.mapper"  targetProject="/Users/hurong/workspace/trip-server/com-trip-dao/src/main/java">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
-        <!--<table schema="test" tableName="user" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false"-->
-               <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
-        <!--</table>-->
-        <table schema="test" tableName="business" domainObjectName="Business" enableCountByExample="false" enableUpdateByExample="false"
+        <table schema="test" tableName="tb_restaurant" domainObjectName="Restaurant" enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+        </table>
+        <table schema="test" tableName="tb_dishes" domainObjectName="Dishes" enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
         </table>
         <!--<table schema="test" tableName="t_stu_class" domainObjectName="Tstclass" enableCountByExample="false" enableUpdateByExample="false"-->

@@ -24,6 +24,6 @@ public class DynamicDatasourceAspect {
     }
 
     public boolean isSlave(String methodName){
-        return StringUtils.startsWithAny(methodName,"query","find","get","search","select");
+        return StringUtils.startsWithAny(methodName,"query","find","get","search","select","login");
     }
 }
