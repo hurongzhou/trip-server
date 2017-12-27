@@ -59,3 +59,35 @@ java.lang.ArithmeticException: / by zero
 ### SQL: select           dishes_id, dishes_name, price, detail, monthly_sales, restaurant_id         from tb_dishes      WHERE  restaurant_id = ?
 ### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'tripslave.tb_dishes' doesn't exist
 ; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'tripslave.tb_dishes' doesn't exist 
+[framework][14:50:50,270-com.trip.controller.StoreController.findCommodities(StoreController.java:38)][ERROR]:org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'commodity_id' in 'field list'
+### The error may exist in class path resource [mapping/CommodityMapper.xml]
+### The error may involve com.trip.mapper.CommodityMapper.findCommodityByCondition-Inline
+### The error occurred while setting parameters
+### SQL: select                commodity_id, commodity_name, price, detail, monthly_sales, store_id, exp_content1,     exp_content2         from tb_commodity      WHERE  store_id = ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'commodity_id' in 'field list'
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'commodity_id' in 'field list' 
+[framework][14:51:54,789-com.trip.controller.StoreController.findCommodities(StoreController.java:40)][ERROR]:org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'commodity_id' in 'field list'
+### The error may exist in class path resource [mapping/CommodityMapper.xml]
+### The error may involve com.trip.mapper.CommodityMapper.findCommodityByCondition-Inline
+### The error occurred while setting parameters
+### SQL: select                commodity_id, commodity_name, price, detail, monthly_sales, store_id, exp_content1,     exp_content2         from tb_commodity      WHERE  store_id = ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'commodity_id' in 'field list'
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'commodity_id' in 'field list' 
+[framework][14:54:06,321-com.trip.controller.StoreController.findCommodities(StoreController.java:40)][ERROR]:org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'commodity_id' in 'field list'
+### The error may exist in class path resource [mapping/CommodityMapper.xml]
+### The error may involve com.trip.mapper.CommodityMapper.findCommodityByCondition-Inline
+### The error occurred while setting parameters
+### SQL: select                commodity_id, commodity_name, price, detail, monthly_sales, store_id, exp_content1,     exp_content2         from tb_commodity      WHERE  store_id = ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'commodity_id' in 'field list'
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'commodity_id' in 'field list' 
+[framework][14:55:46,711-com.trip.controller.StoreController.findCommodities(StoreController.java:40)][ERROR]:org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'commodity_id' in 'field list'
+### The error may exist in class path resource [mapping/CommodityMapper.xml]
+### The error may involve com.trip.mapper.CommodityMapper.findCommodityByCondition-Inline
+### The error occurred while setting parameters
+### SQL: select                commodity_id, commodity_name, price, detail, monthly_sales, store_id, exp_content1,     exp_content2         from tb_commodity      WHERE  store_id = ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'commodity_id' in 'field list'
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'commodity_id' in 'field list' 

@@ -5,11 +5,15 @@
     <!-- 配置映射类的别名 -->
     <typeAliases>
         <typeAlias type="com.trip.entity.Admin" alias="Admin"/>
+        <typeAlias type="com.trip.entity.Dishes" alias="Dishes"/>
+        <typeAlias type="com.trip.entity.User" alias="User"/>
+        <typeAlias type="com.trip.entity.Restaurant" alias="Restaurant"/>
+        <typeAlias type="com.trip.entity.Store" alias="Store"/>
+        <typeAlias type="com.trip.entity.Commodity" alias="Commodity"/>
         <typeAlias type="java.util.Map" alias="Map"/>
         <typeAlias type="java.util.List" alias="List"/>
         <typeAlias type="java.lang.String" alias="String"/>
         <typeAlias type="java.lang.Integer" alias="Integer"/>
-
     </typeAliases>
 
     <!-- 配置Mapper文件的路径 -->
