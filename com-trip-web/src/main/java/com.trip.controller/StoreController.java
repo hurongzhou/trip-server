@@ -44,4 +44,21 @@ public class StoreController {
         }
         return api;
     }
+
+    @RequestMapping("addCommodity.json")
+    @ResponseBody
+    public APITripResult addCommodity(@RequestBody List<Commodity> commodities){
+        APITripResult api=new APITripResult();
+        try {
+            storeService.addCommodity(commodities);
+            api.setMassage("操作成功！");
+            api.setStatus(APITripResult.SUCCESS);
+        }catch (Exception e){
+            logger.error(e);
+            e.printStackTrace();
+            api.setMassage(e.getMessage());
+            api.setStatus(APITripResult.SYSTEM_ERROR);
+        }
+        return api;
+    }
 }

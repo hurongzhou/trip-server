@@ -29,14 +29,14 @@
         <javaClientGenerator type="XMLMAPPER" targetPackage="com.trip.mapper"  targetProject="/Users/hurong/workspace/trip-server/com-trip-dao/src/main/java">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
-        <table schema="test" tableName="tb_store" domainObjectName="Store" enableCountByExample="false" enableUpdateByExample="false"
+        <table schema="test" tableName="tb_viewpoint" domainObjectName="Viewpoint" enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
         </table>
-        <table schema="test" tableName="tb_commodity" domainObjectName="Commodity" enableCountByExample="false" enableUpdateByExample="false"
+        <table schema="test" tableName="tb_ticket" domainObjectName="Ticket" enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
         </table>
-        <!--<table schema="test" tableName="t_stu_class" domainObjectName="Tstclass" enableCountByExample="false" enableUpdateByExample="false"-->
-               <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
-        <!--</table>-->
+        <table schema="test" tableName="tb_route" domainObjectName="Route" enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+        </table>
     </context>
 </generatorConfiguration>

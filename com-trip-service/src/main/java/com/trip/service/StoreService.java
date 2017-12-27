@@ -16,4 +16,10 @@ public class StoreService {
     public List<Commodity> findCommonditiesByCondition(Commodity commodity){
         return storeDao.findCommoditiesByCondition(commodity);
     }
+
+    public void addCommodity(List<Commodity> commodities){
+        for (Commodity commodity:commodities){
+            storeDao.addCommodity(commodity);
+        }
+    }
 }
