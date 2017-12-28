@@ -1,12 +1,11 @@
-package com.trip.mapper;
+package com.trip.dao;
 
 import com.trip.entity.Restaurant;
 
 import java.util.List;
 import java.util.Map;
 
-public interface RestaurantMapper {
-
+public interface RestaurantDao {
     int deleteByPrimaryKey(Integer restaurantId);
 
     int insert(Restaurant record);

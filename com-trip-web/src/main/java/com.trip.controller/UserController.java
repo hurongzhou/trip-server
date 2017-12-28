@@ -1,6 +1,7 @@
 package com.trip.controller;
 
 import com.trip.common.APITripResult;
+import com.trip.entity.RestaurantAndDishes;
 import com.trip.entity.User;
 import com.trip.service.UserService;
 import org.apache.log4j.Logger;
@@ -76,11 +77,28 @@ public class UserController {
         try {
             users=userService.queryAll();
             api.setResult(users);
-            int a=1/0;
             api.setMassage("操作成功！");
             api.setStatus(APITripResult.SUCCESS);
         }catch (Exception e){
             logger.error("系统错误！{}",e);
+            e.printStackTrace();
+            api.setMassage(e.getMessage());
+            api.setStatus(APITripResult.SYSTEM_ERROR);
+        }
+        return api;
+    }
+
+    @RequestMapping("searchRestaurantAndDishes.json")
+    @ResponseBody
+    public APITripResult searchRestaurantAndDishes(String keyWord){
+        APITripResult api=new APITripResult();
+        try {
+            List<RestaurantAndDishes> rdList=userService.searchRestaurantAndDishes(keyWord);
+            api.setResult(rdList);
+            api.setMassage("操作成功！");
+            api.setStatus(APITripResult.SUCCESS);
+        }catch (Exception e){
+            logger.error(e);
             e.printStackTrace();
             api.setMassage(e.getMessage());
             api.setStatus(APITripResult.SYSTEM_ERROR);

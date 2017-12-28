@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping(value = "dishes")
@@ -24,15 +26,13 @@ public class DishesController {
 
     @RequestMapping("queryByCondition.json")
     @ResponseBody
-    public APITripResult queryByCondition(@RequestBody Dishes dishes){
+    public APITripResult queryByCondition(String keyWord){
         APITripResult api=new APITripResult();
         try {
+            Map<String,Object> param=new HashMap();
+            param.put("dishesName",keyWord);
             List<Dishes> dishesList=new ArrayList();
-            if (dishes==null){
-                 dishesList=dishesService.queryByCondition(new Dishes());
-            }else {
-                dishesList=dishesService.queryByCondition(dishes);
-            }
+            dishesList=dishesService.queryByCondition(param);
             api.setResult(dishesList);
             api.setMassage("操作成功！");
             api.setStatus(APITripResult.SUCCESS);

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Map;
 
 @Repository
 public class DishesDaoImpl implements DishesDao{
@@ -15,7 +16,7 @@ public class DishesDaoImpl implements DishesDao{
     DishesMapper dishesMapper;
 
     @Override
-    public List<Dishes> queryByCondition(Dishes dishes) {
-        return dishesMapper.queryByCondition(dishes);
+    public List<Dishes> queryByCondition(Map<String,Object> param) {
+        return dishesMapper.queryByCondition(param);
     }
 }

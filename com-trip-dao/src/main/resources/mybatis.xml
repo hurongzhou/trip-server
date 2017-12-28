@@ -10,6 +10,9 @@
         <typeAlias type="com.trip.entity.Restaurant" alias="Restaurant"/>
         <typeAlias type="com.trip.entity.Store" alias="Store"/>
         <typeAlias type="com.trip.entity.Commodity" alias="Commodity"/>
+        <typeAlias type="com.trip.entity.Viewpoint" alias="Viewpoint"/>
+        <typeAlias type="com.trip.entity.Ticket" alias="Ticket"/>
+        <typeAlias type="com.trip.entity.Route" alias="Route"/>
         <typeAlias type="java.util.Map" alias="Map"/>
         <typeAlias type="java.util.List" alias="List"/>
         <typeAlias type="java.lang.String" alias="String"/>

@@ -3,6 +3,7 @@ package com.trip.mapper;
 import com.trip.entity.Dishes;
 
 import java.util.List;
+import java.util.Map;
 
 public interface DishesMapper {
     /**
@@ -53,5 +54,5 @@ public interface DishesMapper {
      */
     int updateByPrimaryKey(Dishes record);
 
-    List<Dishes> queryByCondition(Dishes dishes);
+    List<Dishes> queryByCondition(Map<String,Object> param);
 }
