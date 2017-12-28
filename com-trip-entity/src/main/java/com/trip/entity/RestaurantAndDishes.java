@@ -1,8 +1,9 @@
 package com.trip.entity;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class RestaurantAndDishes {
+public class RestaurantAndDishes implements Serializable{
     private Restaurant restaurant;
     private List<Dishes> dishesList;
 

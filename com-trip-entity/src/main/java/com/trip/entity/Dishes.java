@@ -1,6 +1,8 @@
 package com.trip.entity;
 
-public class Dishes {
+import java.io.Serializable;
+
+public class Dishes implements Serializable{
 
     private Integer dishesId;
 
