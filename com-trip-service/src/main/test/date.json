@@ -1,0 +1,192 @@
+{
+  "data": [
+    {
+      "restaurant": {
+        "restaurantId": 1,
+        "loginName": "aaa",
+        "password": "123",
+        "restaurantName": "杨记牛肉馆",
+        "address": "黎平县城休闲广场",
+        "tel": "134",
+        "score": 5,
+        "monthlySales": 32,
+        "expContent1": null,
+        "expContent2": null
+      },
+      "dishesList": [
+        {
+          "dishesId": 3,
+          "dishesName": "黄焖鸡小份",
+          "price": 14.9,
+          "detail": "黄焖鸡",
+          "monthlySales": 100,
+          "restaurantId": 1,
+          "expContent1": null,
+          "expContent2": null
+        }
+      ]
+    },
+    {
+      "restaurant": {
+        "restaurantId": 2,
+        "loginName": "aaa",
+        "password": "123",
+        "restaurantName": "杨宇黄焖鸡米饭",
+        "address": "北京市",
+        "tel": "43",
+        "score": 3,
+        "monthlySales": 43,
+        "expContent1": null,
+        "expContent2": null
+      },
+      "dishesList": [
+        {
+          "dishesId": 4,
+          "dishesName": "黄焖鸡+任意配菜",
+          "price": 34,
+          "detail": "黄焖鸡+任意配菜",
+          "monthlySales": 122,
+          "restaurantId": 2,
+          "expContent1": null,
+          "expContent2": null
+        },
+        {
+          "dishesId": 5,
+          "dishesName": "黄焖鸡米饭",
+          "price": 25,
+          "detail": "黄焖鸡米饭",
+          "monthlySales": 122,
+          "restaurantId": 2,
+          "expContent1": null,
+          "expContent2": null
+        }
+      ]
+    },
+    {
+      "restaurant": {
+        "restaurantId": 3,
+        "loginName": "aaa",
+        "password": "123",
+        "restaurantName": "杨铭宇黄焖鸡米饭",
+        "address": "北京市",
+        "tel": "32",
+        "score": 4,
+        "monthlySales": 54,
+        "expContent1": null,
+        "expContent2": null
+      },
+      "dishesList": [
+        {
+          "dishesId": 6,
+          "dishesName": "小份黄焖鸡",
+          "price": 28,
+          "detail": "小份黄焖鸡+米饭",
+          "monthlySales": 133,
+          "restaurantId": 3,
+          "expContent1": null,
+          "expContent2": null
+        },
+        {
+          "dishesId": 7,
+          "dishesName": "大份黄焖鸡",
+          "price": 31,
+          "detail": "大分黄焖鸡+米饭不辣",
+          "monthlySales": 432,
+          "restaurantId": 3,
+          "expContent1": null,
+          "expContent2": null
+        }
+      ]
+    },
+    {
+      "restaurant": {
+        "restaurantId": 4,
+        "loginName": "aaa",
+        "password": "123",
+        "restaurantName": "黄记黄焖鸡米饭",
+        "address": "北京市",
+        "tel": "4343",
+        "score": 4,
+        "monthlySales": 435,
+        "expContent1": null,
+        "expContent2": null
+      },
+      "dishesList": [
+        {
+          "dishesId": 8,
+          "dishesName": "小份黄焖鸡",
+          "price": 34.68,
+          "detail": "小份黄焖鸡+饮料",
+          "monthlySales": 32,
+          "restaurantId": 4,
+          "expContent1": null,
+          "expContent2": null
+        }
+      ]
+    },
+    {
+      "restaurant": {
+        "restaurantId": 5,
+        "loginName": "aaa",
+        "password": "123",
+        "restaurantName": "一品粥",
+        "address": "北京市",
+        "tel": "45245",
+        "score": 3,
+        "monthlySales": 44,
+        "expContent1": null,
+        "expContent2": null
+      },
+      "dishesList": [
+        {
+          "dishesId": 9,
+          "dishesName": "香菇黄焖鸡",
+          "price": 54,
+          "detail": "香菇黄焖鸡米饭套餐",
+          "monthlySales": 131,
+          "restaurantId": 5,
+          "expContent1": null,
+          "expContent2": null
+        },
+        {
+          "dishesId": 10,
+          "dishesName": "鱼豆腐黄焖鸡",
+          "price": 63,
+          "detail": "鱼豆腐黄焖鸡+米饭",
+          "monthlySales": 32,
+          "restaurantId": 5,
+          "expContent1": null,
+          "expContent2": null
+        }
+      ]
+    },
+    {
+      "restaurant": {
+        "restaurantId": 6,
+        "loginName": "aaa",
+        "password": "123",
+        "restaurantName": "大东北黄焖鸡米饭",
+        "address": "北京市",
+        "tel": "5245",
+        "score": 4,
+        "monthlySales": 54,
+        "expContent1": null,
+        "expContent2": null
+      },
+      "dishesList": [
+        {
+          "dishesId": 11,
+          "dishesName": "小份黄焖鸡",
+          "price": 32,
+          "detail": "黄焖鸡+土豆+青菜",
+          "monthlySales": 342,
+          "restaurantId": 6,
+          "expContent1": null,
+          "expContent2": null
+        }
+      ]
+    }
+  ],
+  "massage": "操作成功！",
+  "status": 1
+}
