@@ -29,10 +29,8 @@ public class DishesController {
     public APITripResult queryByCondition(String keyWord){
         APITripResult api=new APITripResult();
         try {
-            Map<String,Object> param=new HashMap();
-            param.put("dishesName",keyWord);
             List<Dishes> dishesList=new ArrayList();
-            dishesList=dishesService.queryByCondition(param);
+            dishesList=dishesService.queryByCondition(keyWord,null);
             api.setResult(dishesList);
             api.setMassage("操作成功！");
             api.setStatus(APITripResult.SUCCESS);

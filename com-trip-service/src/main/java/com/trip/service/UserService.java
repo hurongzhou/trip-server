@@ -40,24 +40,23 @@ public class UserService {
 
     public List<User> queryAll(){
         String key="query_all_user";
-        List<User> users=new ArrayList();
-        users= (List<User>) redisUtil.get(key);
-        if (users==null){
-            users=userDao.selectAll();
-            redisUtil.set(key,users, RedisConstant.buildExp());
+        List<User> users= (List<User>) redisUtil.get(key);
+        if (users!=null){
+            return users;
         }
+        users=userDao.selectAll();
+        redisUtil.set(key,users, RedisConstant.buildExp());
         return users;
     }
 
     public List<RestaurantAndDishes> searchRestaurantAndDishes(String keyWord){
         final String key="search_restaurant_dishes_"+keyWord;
-        List<RestaurantAndDishes> resultList= (List<RestaurantAndDishes>) redisUtil.get(key);
+        List<RestaurantAndDishes> resultList=(List<RestaurantAndDishes>) redisUtil.get(key);
         if (resultList!=null){
             return resultList;
         }
-        Map<String,Object> dishesParam=new HashMap();
-        dishesParam.put("dishesName",keyWord);
-        List<Dishes> dishesList=dishesService.queryByCondition(dishesParam);
+        resultList= new ArrayList();
+        List<Dishes> dishesList=dishesService.queryByCondition(keyWord,null);
 
         Set<Integer> restaurantIdList=new HashSet();
         for (Dishes d:dishesList){
@@ -73,10 +72,7 @@ public class UserService {
             Integer id=restaurant.getRestaurantId();
             newIds.add(id);
         }
-        Map<String,Object> newParam=new HashMap();
-        newParam.put("restaurantIdList",newIds);
-        newParam.put("dishesName",keyWord);
-        List<Dishes> newDishes=dishesService.queryByCondition(newParam);
+        List<Dishes> newDishes=dishesService.queryByCondition(keyWord,newIds);
 
         for (Restaurant r:restaurantList){
             RestaurantAndDishes rd=new RestaurantAndDishes();

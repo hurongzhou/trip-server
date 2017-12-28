@@ -891,3 +891,9 @@ Caused by: java.io.InvalidClassException: com.trip.entity.User; class invalid fo
 	at org.springframework.core.serializer.DefaultDeserializer.deserialize(DefaultDeserializer.java:70)
 	at org.springframework.core.serializer.support.DeserializingConverter.convert(DeserializingConverter.java:73)
 	... 66 more
+[framework][18:04:53,318-com.trip.controller.UserController.searchRestaurantAndDishes(UserController.java:101)][ERROR]:java.lang.NullPointerException 
+[framework][18:07:20,662-com.trip.controller.UserController.searchRestaurantAndDishes(UserController.java:101)][ERROR]:java.lang.NullPointerException 
+[framework][18:09:19,093-com.trip.controller.UserController.searchRestaurantAndDishes(UserController.java:101)][ERROR]:java.lang.NullPointerException 
+[framework][18:09:52,530-com.trip.controller.UserController.searchRestaurantAndDishes(UserController.java:101)][ERROR]:java.lang.NullPointerException 
+[framework][18:11:28,261-com.trip.controller.UserController.searchRestaurantAndDishes(UserController.java:101)][ERROR]:java.lang.NullPointerException 
+[framework][20:29:28,700-com.trip.controller.UserController.searchRestaurantAndDishes(UserController.java:101)][ERROR]:java.lang.NullPointerException 
