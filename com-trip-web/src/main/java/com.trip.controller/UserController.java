@@ -5,6 +5,7 @@ import com.trip.entity.RestaurantAndDishes;
 import com.trip.entity.User;
 import com.trip.service.UserService;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,6 +24,8 @@ import java.util.Map;
 public class UserController {
     Logger logger=Logger.getLogger(UserController.class);
 
+    @Value("#{areas}")
+    Map<String,String> areaMap;
     @Resource
     UserService userService;
 
@@ -90,10 +93,14 @@ public class UserController {
 
     @RequestMapping("searchRestaurantAndDishes.json")
     @ResponseBody
-    public APITripResult searchRestaurantAndDishes(String keyWord){
+    public APITripResult searchRestaurantAndDishes(String keyWord,String areaCode){
         APITripResult api=new APITripResult();
         try {
-            List<RestaurantAndDishes> rdList=userService.searchRestaurantAndDishes(keyWord);
+            String area=areaMap.get(areaCode);
+            if (area==null){
+                throw new Exception("您选择的地区未开通！");
+            }
+            List<RestaurantAndDishes> rdList=userService.searchRestaurantAndDishes(keyWord,areaCode);
             api.setResult(rdList);
             api.setMassage("操作成功！");
             api.setStatus(APITripResult.SUCCESS);
