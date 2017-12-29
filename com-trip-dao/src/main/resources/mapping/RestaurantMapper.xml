@@ -10,14 +10,14 @@
     <result column="tel" property="tel" jdbcType="VARCHAR" />
     <result column="score" property="score" jdbcType="DOUBLE" />
     <result column="monthly_sales" property="monthlySales" jdbcType="INTEGER" />
-    <result column="exp_content1" property="expContent1" jdbcType="VARCHAR" />
+    <result column="area_code" property="areaCode" jdbcType="VARCHAR" />
     <result column="exp_content2" property="expContent2" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    restaurant_id, login_name, password, restaurant_name, address, tel, score, monthly_sales
+    restaurant_id, login_name, password, restaurant_name, address, tel, score, monthly_sales,area_code
   </sql>
   <sql id="Use_Column_List">
-    restaurant_id, restaurant_name, address, tel, score, monthly_sales
+    restaurant_id, restaurant_name, address, tel, score, monthly_sales,area_code
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
@@ -25,7 +25,7 @@
     from tb_restaurant
     where restaurant_id = #{restaurantId,jdbcType=INTEGER}
   </select>
-  <select id="selectUniqueRestaurant" parameterType="Map" resultType="Restaurant">
+  <select id="login" parameterType="Map" resultType="Restaurant">
     select
     <include refid="Base_Column_List"/>
     from tb_restaurant where login_name=#{loginName} and password=#{password}
@@ -35,6 +35,7 @@
     <include refid="Base_Column_List"/>
     from tb_restaurant
     <where>
+        area_code=#{areaCode} and
         restaurant_name like concat(concat('%',#{restaurantName}),'%')
         or restaurant_id in
         <foreach collection="restaurantIdList" index="index" item="item" open="(" separator="," close=")">
@@ -59,11 +60,11 @@
     -->
     insert into tb_restaurant (restaurant_id, login_name, password, 
       restaurant_name, address, tel, 
-      score, monthly_sales, exp_content1, 
+      score, monthly_sales, area_code,
       exp_content2)
     values (#{restaurantId,jdbcType=INTEGER}, #{loginName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
       #{restaurantName,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{tel,jdbcType=VARCHAR}, 
-      #{score,jdbcType=DOUBLE}, #{monthlySales,jdbcType=INTEGER}, #{expContent1,jdbcType=VARCHAR}, 
+      #{score,jdbcType=DOUBLE}, #{monthlySales,jdbcType=INTEGER}, #{areaCode,jdbcType=VARCHAR},
       #{expContent2,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.trip.entity.Restaurant" >
@@ -98,8 +99,8 @@
       <if test="monthlySales != null" >
         monthly_sales,
       </if>
-      <if test="expContent1 != null" >
-        exp_content1,
+      <if test="areaCode != null" >
+        area_code,
       </if>
       <if test="expContent2 != null" >
         exp_content2,
@@ -130,8 +131,8 @@
       <if test="monthlySales != null" >
         #{monthlySales,jdbcType=INTEGER},
       </if>
-      <if test="expContent1 != null" >
-        #{expContent1,jdbcType=VARCHAR},
+      <if test="areaCode != null" >
+        #{areaCode,jdbcType=VARCHAR},
       </if>
       <if test="expContent2 != null" >
         #{expContent2,jdbcType=VARCHAR},
@@ -167,8 +168,8 @@
       <if test="monthlySales != null" >
         monthly_sales = #{monthlySales,jdbcType=INTEGER},
       </if>
-      <if test="expContent1 != null" >
-        exp_content1 = #{expContent1,jdbcType=VARCHAR},
+      <if test="areaCode != null" >
+        area_code = #{areaCode,jdbcType=VARCHAR},
       </if>
       <if test="expContent2 != null" >
         exp_content2 = #{expContent2,jdbcType=VARCHAR},
@@ -190,7 +191,7 @@
       tel = #{tel,jdbcType=VARCHAR},
       score = #{score,jdbcType=DOUBLE},
       monthly_sales = #{monthlySales,jdbcType=INTEGER},
-      exp_content1 = #{expContent1,jdbcType=VARCHAR},
+      area_code = #{areaCode,jdbcType=VARCHAR},
       exp_content2 = #{expContent2,jdbcType=VARCHAR}
     where restaurant_id = #{restaurantId,jdbcType=INTEGER}
   </update>

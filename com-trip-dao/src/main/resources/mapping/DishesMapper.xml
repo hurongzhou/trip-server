@@ -8,7 +8,7 @@
     <result column="detail" property="detail" jdbcType="VARCHAR" />
     <result column="monthly_sales" property="monthlySales" jdbcType="INTEGER" />
     <result column="restaurant_id" property="restaurantId" jdbcType="INTEGER" />
-    <result column="exp_content1" property="expContent1" jdbcType="VARCHAR" />
+    <result column="area_code" property="areaCode" jdbcType="VARCHAR" />
     <result column="exp_content2" property="expContent2" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
@@ -25,10 +25,13 @@
     <include refid="Base_Column_List"/>
     from tb_dishes
     <where>
-      <if test="dishesName != null" >
-        dishes_name like concat(concat('%',#{dishesName}),'%')
+      <if test="areaCode!=null">
+        area_code=#{areaCode}
       </if>
-      <if test="restaurantId != null" >
+      <if test="dishesName != null" >
+        and dishes_name like concat(concat('%',#{dishesName}),'%')
+      </if>
+      <if test="restaurantIdList != null" >
         and restaurant_id in
         <foreach collection="restaurantIdList" index="index" item="item" open="(" separator="," close=")">
           #{item}
@@ -48,10 +51,10 @@
     -->
     insert into tb_dishes (dishes_id, dishes_name, price, 
       detail, monthly_sales, restaurant_id, 
-      exp_content1, exp_content2)
+      area_code, exp_content2)
     values (#{dishesId,jdbcType=INTEGER}, #{dishesName,jdbcType=VARCHAR}, #{price,jdbcType=DOUBLE}, 
       #{detail,jdbcType=VARCHAR}, #{monthlySales,jdbcType=INTEGER}, #{restaurantId,jdbcType=INTEGER}, 
-      #{expContent1,jdbcType=VARCHAR}, #{expContent2,jdbcType=VARCHAR})
+      #{areaCode,jdbcType=VARCHAR}, #{expContent2,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.trip.entity.Dishes" >
     <!--
@@ -79,8 +82,8 @@
       <if test="restaurantId != null" >
         restaurant_id,
       </if>
-      <if test="expContent1 != null" >
-        exp_content1,
+      <if test="areaCode != null" >
+        area_code,
       </if>
       <if test="expContent2 != null" >
         exp_content2,
@@ -105,8 +108,8 @@
       <if test="restaurantId != null" >
         #{restaurantId,jdbcType=INTEGER},
       </if>
-      <if test="expContent1 != null" >
-        #{expContent1,jdbcType=VARCHAR},
+      <if test="areaCode != null" >
+        #{area_code,jdbcType=VARCHAR},
       </if>
       <if test="expContent2 != null" >
         #{expContent2,jdbcType=VARCHAR},
@@ -131,8 +134,8 @@
       <if test="restaurantId != null" >
         restaurant_id = #{restaurantId,jdbcType=INTEGER},
       </if>
-      <if test="expContent1 != null" >
-        exp_content1 = #{expContent1,jdbcType=VARCHAR},
+      <if test="areaCode != null" >
+        area_code = #{areaCode,jdbcType=VARCHAR},
       </if>
       <if test="expContent2 != null" >
         exp_content2 = #{expContent2,jdbcType=VARCHAR},
@@ -147,7 +150,7 @@
       detail = #{detail,jdbcType=VARCHAR},
       monthly_sales = #{monthlySales,jdbcType=INTEGER},
       restaurant_id = #{restaurantId,jdbcType=INTEGER},
-      exp_content1 = #{expContent1,jdbcType=VARCHAR},
+      area_code = #{areaCode,jdbcType=VARCHAR},
       exp_content2 = #{expContent2,jdbcType=VARCHAR}
     where dishes_id = #{dishesId,jdbcType=INTEGER}
   </update>

@@ -3,6 +3,7 @@ package com.trip.controller;
 import com.trip.common.APITripResult;
 import com.trip.entity.Commodity;
 import com.trip.entity.Restaurant;
+import com.trip.entity.Store;
 import com.trip.service.StoreService;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
@@ -28,8 +29,8 @@ public class StoreController {
     public APITripResult login(String loginName,String password){
         APITripResult api=new APITripResult();
         try {
-            Restaurant restaurant=storeService.login(loginName,password);
-            if (restaurant==null){
+            Store store=storeService.login(loginName,password);
+            if (store==null){
                 api.setMassage("用户名或密码错误！");
                 api.setStatus(APITripResult.SYSTEM_ERROR);
             }else {
@@ -45,9 +46,9 @@ public class StoreController {
         return api;
     }
 
-    @RequestMapping("findCommodityOfRestaurant.json")
+    @RequestMapping("findCommodityOfStore.json")
     @ResponseBody
-    public APITripResult findCommodityByRestaurant(@RequestBody Commodity commodityReq){
+    public APITripResult findCommodityByStore(@RequestBody Commodity commodityReq){
         APITripResult api=new APITripResult();
         try {
             List<Commodity> commodities=new ArrayList();
@@ -76,6 +77,46 @@ public class StoreController {
             storeService.addCommodity(commodities);
             api.setMassage("操作成功！");
             api.setStatus(APITripResult.SUCCESS);
+        }catch (Exception e){
+            logger.error(e);
+            e.printStackTrace();
+            api.setMassage(e.getMessage());
+            api.setStatus(APITripResult.SYSTEM_ERROR);
+        }
+        return api;
+    }
+
+    @RequestMapping("modifyCommodityList.json")
+    @ResponseBody
+    public APITripResult modifyCommodityList(@RequestBody List<Commodity> commodityList){
+        APITripResult api=new APITripResult();
+        try {
+            List<Integer> modifyIds=storeService.modifyCommodityList(commodityList);
+            api.setResult(modifyIds);
+            api.setMassage("修改成功！");
+            api.setStatus(APITripResult.SUCCESS);
+        }catch (Exception e){
+            logger.error(e);
+            e.printStackTrace();
+            api.setMassage(e.getMessage());
+            api.setStatus(APITripResult.SYSTEM_ERROR);
+        }
+        return api;
+    }
+
+    @RequestMapping("deleteCommodityLis.json")
+    @ResponseBody
+    public APITripResult deleteCommodityList(Integer[] commodityIds){
+        APITripResult api=new APITripResult();
+        try {
+            if (commodityIds==null||commodityIds.length<1){
+                api.setMassage("您没有选择任何商品!");
+                api.setStatus(APITripResult.SYSTEM_ERROR);
+            }else {
+                storeService.deleteCommodityList(commodityIds);
+                api.setMassage("删除成功！");
+                api.setStatus(APITripResult.SUCCESS);
+            }
         }catch (Exception e){
             logger.error(e);
             e.printStackTrace();

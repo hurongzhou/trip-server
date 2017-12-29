@@ -16,6 +16,36 @@ public class DishesDaoImpl implements DishesDao{
     DishesMapper dishesMapper;
 
     @Override
+    public int deleteByPrimaryKey(Integer dishesId) {
+        return 0;
+    }
+
+    @Override
+    public int insert(Dishes record) {
+        return 0;
+    }
+
+    @Override
+    public int insertSelective(Dishes record) {
+        return dishesMapper.insertSelective(record);
+    }
+
+    @Override
+    public Dishes selectByPrimaryKey(Integer dishesId) {
+        return null;
+    }
+
+    @Override
+    public int updateByPrimaryKeySelective(Dishes record) {
+        return 0;
+    }
+
+    @Override
+    public int updateByPrimaryKey(Dishes record) {
+        return 0;
+    }
+
+    @Override
     public List<Dishes> queryByCondition(Map<String,Object> param) {
         return dishesMapper.queryByCondition(param);
     }

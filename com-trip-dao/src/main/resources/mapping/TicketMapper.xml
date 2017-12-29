@@ -53,7 +53,7 @@
       instruction, viewpoint_id, exp_content1, 
       exp_content2)
     values (#{ticketId,jdbcType=INTEGER}, #{ticketName,jdbcType=VARCHAR}, #{price,jdbcType=DOUBLE}, 
-      #{instruction,jdbcType=VARCHAR}, #{viewpointId,jdbcType=INTEGER}, #{expContent1,jdbcType=VARCHAR}, 
+      #{instruction,jdbcType=VARCHAR}, #{viewpointId,jdbcType=INTEGER}, #{expContent1,jdbcType=VARCHAR},
       #{expContent2,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.trip.entity.Ticket">

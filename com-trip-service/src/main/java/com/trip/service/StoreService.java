@@ -3,9 +3,11 @@ package com.trip.service;
 import com.trip.dao.StoreDao;
 import com.trip.entity.Commodity;
 import com.trip.entity.Restaurant;
+import com.trip.entity.Store;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -26,11 +28,26 @@ public class StoreService {
         }
     }
 
-    public Restaurant login(String loginName,String password){
+    public Store login(String loginName, String password){
         Map<String,Object> param=new HashMap();
         param.put("loginName",loginName);
         param.put("password",password);
-        Restaurant restaurant=storeDao.login(param);
-        return restaurant;
+        Store store=storeDao.login(param);
+        return store;
+    }
+
+    public List<Integer> modifyCommodityList(List<Commodity> commodities){
+        List<Integer> modifyIds=new ArrayList();
+        for (Commodity c:commodities){
+            storeDao.modifyCommodity(c);
+            modifyIds.add(c.getCommodityId());
+        }
+        return modifyIds;
+    }
+
+    public void deleteCommodityList(Integer[] commodityIds){
+        for (int i=0;i<commodityIds.length;i++){
+            storeDao.deleteCommodityById(commodityIds[i]);
+        }
     }
 }

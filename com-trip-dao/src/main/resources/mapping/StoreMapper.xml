@@ -38,6 +38,12 @@
     from tb_store
     where store_id = #{storeId,jdbcType=INTEGER}
   </select>
+  <select id="login" parameterType="Map" resultType="Store">
+    select
+    <include refid="Base_Column_List"/>
+    from tb_store
+    where login_name=#{loginName} and password=#{password}
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     <!--
       WARNING - @mbggenerated
@@ -59,7 +65,7 @@
       exp_content2)
     values (#{storeId,jdbcType=INTEGER}, #{loginName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
       #{storeName,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{score,jdbcType=DOUBLE}, 
-      #{tel,jdbcType=VARCHAR}, #{monthlySales,jdbcType=INTEGER}, #{expContent1,jdbcType=VARCHAR}, 
+      #{tel,jdbcType=VARCHAR}, #{monthlySales,jdbcType=INTEGER}, #{expContent1,jdbcType=VARCHAR},
       #{expContent2,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.trip.entity.Store">

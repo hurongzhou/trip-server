@@ -49,14 +49,14 @@ public class UserService {
         return users;
     }
 
-    public List<RestaurantAndDishes> searchRestaurantAndDishes(String keyWord){
+    public List<RestaurantAndDishes> searchRestaurantAndDishes(String keyWord,String areaCode){
         final String key="search_restaurant_dishes_"+keyWord;
         List<RestaurantAndDishes> resultList=(List<RestaurantAndDishes>) redisUtil.get(key);
         if (resultList!=null){
             return resultList;
         }
         resultList= new ArrayList();
-        List<Dishes> dishesList=dishesService.queryByCondition(keyWord,null);
+        List<Dishes> dishesList=dishesService.queryByCondition(keyWord,null,areaCode);
 
         Set<Integer> restaurantIdList=new HashSet();
         for (Dishes d:dishesList){
@@ -65,6 +65,7 @@ public class UserService {
         Map<String,Object> param=new HashMap();
         param.put("restaurantName",keyWord);
         param.put("restaurantIdList",restaurantIdList);
+        param.put("areaCode",areaCode);
         List<Restaurant> restaurantList=restaurantService.queryRestaurantByCondition(param);
 
         List<Integer> newIds=new ArrayList();
@@ -72,7 +73,7 @@ public class UserService {
             Integer id=restaurant.getRestaurantId();
             newIds.add(id);
         }
-        List<Dishes> newDishes=dishesService.queryByCondition(keyWord,newIds);
+        List<Dishes> newDishes=dishesService.queryByCondition(null,newIds,null);
 
         for (Restaurant r:restaurantList){
             RestaurantAndDishes rd=new RestaurantAndDishes();
