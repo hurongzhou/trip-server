@@ -1,5 +1,6 @@
 package com.trip.service;
 
+import com.trip.common.redis.RedisConstant;
 import com.trip.common.redis.RedisUtil;
 import com.trip.dao.ViewpointDao;
 import com.trip.entity.Route;
@@ -22,6 +23,8 @@ public class ViewpointService {
     @Resource
     TicketService ticketService;
     @Resource
+    ImageService imageService;
+    @Resource
     RedisUtil redisUtil;
 
     public List<Viewpoint> searchByKeyword(String keyword){
@@ -31,6 +34,8 @@ public class ViewpointService {
         for (Viewpoint viewpoint:viewpoints){
             List<Route> routes=routeService.searchByViewpointId(viewpoint.getViewpointId());
             List<Ticket> tickets=ticketService.searchByViewpointId(viewpoint.getViewpointId());
+            List<String> urls=imageService.queryImageUrlsByForeignId("viewpointId",viewpoint.getViewpointId());
+            viewpoint.setImageUrls(urls);
             viewpoint.setRoutes(routes);
             viewpoint.setTickets(tickets);
         }
@@ -46,8 +51,15 @@ public class ViewpointService {
         viewpoint=viewpointDao.selectByPrimaryKey(id);
         List<Route> routes=routeService.searchByViewpointId(id);
         List<Ticket> tickets=ticketService.searchByViewpointId(id);
+        List<String> urls=imageService.queryImageUrlsByForeignId("viewpointId",viewpoint.getViewpointId());
+        viewpoint.setImageUrls(urls);
         viewpoint.setRoutes(routes);
         viewpoint.setTickets(tickets);
+        redisUtil.set(key,viewpoint, RedisConstant.buildExp());
         return viewpoint;
+    }
+    
+    public List<Viewpoint> queryAll(){
+        return viewpointDao.queryAll();
     }
 }

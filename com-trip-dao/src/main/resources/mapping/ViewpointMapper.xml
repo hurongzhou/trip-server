@@ -43,6 +43,11 @@
     from tb_viewpoint
     where viewpoint_name like concat(concat('%',#{viewpoingName}),'%'))
   </select>
+  <select id="queryAll" resultMap="BaseResultMap" resultType="List">
+    select
+    <include refid="Base_Column_List"/>
+    from tb_viewpoint
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     <!--
       WARNING - @mbggenerated

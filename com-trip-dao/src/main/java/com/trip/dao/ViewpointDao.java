@@ -20,4 +20,6 @@ public interface ViewpointDao {
     int updateByPrimaryKey(Viewpoint record);
 
     List<Viewpoint> searchByKeyword(Map<String,Object> param);
+
+    List<Viewpoint> queryAll();
 }

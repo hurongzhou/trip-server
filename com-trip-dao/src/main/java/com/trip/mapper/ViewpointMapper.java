@@ -19,5 +19,7 @@ public interface ViewpointMapper {
 
     int updateByPrimaryKey(Viewpoint record);
 
-    List<Viewpoint>  searchByKeyword(Map<String,Object> param);
+    List<Viewpoint> searchByKeyword(Map<String,Object> param);
+
+    List<Viewpoint> queryAll();
 }
