@@ -32,8 +32,13 @@ public class StoreDaoImpl implements StoreDao{
     }
 
     @Override
-    public Store login(Map<String, Object> param) {
-        return storeMapper.login(param);
+    public void addStore(Store store) {
+        storeMapper.insertSelective(store);
+    }
+
+    @Override
+    public Store queryUniqueOne(Map<String, Object> param) {
+        return storeMapper.queryUniqueOne(param);
     }
 
     @Override

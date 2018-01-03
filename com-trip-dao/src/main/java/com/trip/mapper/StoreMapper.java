@@ -53,5 +53,6 @@ public interface StoreMapper {
      */
     int updateByPrimaryKey(Store record);
 
-    Store login(Map<String,Object> param);
+    Store queryUniqueOne(Map<String,Object> param);
+
 }

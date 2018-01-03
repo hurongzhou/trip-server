@@ -17,37 +17,37 @@ public class RestaurantDaoImpl implements RestaurantDao{
 
     @Override
     public int deleteByPrimaryKey(Integer restaurantId) {
-        return 0;
+        return restaurantMapper.deleteByPrimaryKey(restaurantId);
     }
 
     @Override
     public int insert(Restaurant record) {
-        return 0;
+        return restaurantMapper.insert(record);
     }
 
     @Override
     public int insertSelective(Restaurant record) {
-        return 0;
+        return restaurantMapper.insertSelective(record);
     }
 
     @Override
     public Restaurant selectByPrimaryKey(Integer restaurantId) {
-        return null;
+        return restaurantMapper.selectByPrimaryKey(restaurantId);
     }
 
     @Override
     public int updateByPrimaryKeySelective(Restaurant record) {
-        return 0;
+        return restaurantMapper.updateByPrimaryKeySelective(record);
     }
 
     @Override
     public int updateByPrimaryKey(Restaurant record) {
-        return 0;
+        return restaurantMapper.updateByPrimaryKey(record);
     }
 
     @Override
-    public Restaurant login(Map<String, Object> param) {
-        return null;
+    public Restaurant queryUniqueOne(Map<String, Object> param) {
+        return restaurantMapper.queryUniqueOne(param);
     }
 
     @Override

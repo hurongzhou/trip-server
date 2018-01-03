@@ -26,6 +26,34 @@ public class RestaurantController {
     @Resource
     RestaurantService restaurantService;
 
+
+    @RequestMapping("register.json")
+    @ResponseBody
+    public APITripResult register(@RequestBody Restaurant restaurant){
+        APITripResult api=new APITripResult();
+        try {
+            if (restaurant==null){
+                api.setMassage("注册的信息为空！");
+                api.setStatus(APITripResult.SYSTEM_ERROR);
+                return api;
+            }
+            boolean success=restaurantService.register(restaurant);
+            if (!success){
+                api.setMassage("登录名已存在！");
+                api.setStatus(APITripResult.SUCCESS);
+            }else {
+                api.setMassage("注册成功！");
+                api.setStatus(APITripResult.SUCCESS);
+            }
+        }catch (Exception e){
+            logger.error(e);
+            e.printStackTrace();
+            api.setMassage(e.getMessage());
+            api.setStatus(APITripResult.SYSTEM_ERROR);
+        }
+        return api;
+    }
+
     @RequestMapping("login.json")
     @ResponseBody
     public APITripResult login(String loginName,String password){

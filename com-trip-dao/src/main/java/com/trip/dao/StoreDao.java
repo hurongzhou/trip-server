@@ -10,7 +10,8 @@ import java.util.Map;
 public interface StoreDao {
     List<Commodity> findCommoditiesByCondition(Commodity commodity);
     void addCommodity(Commodity commodity);
-    Store login(Map<String,Object> param);
+    void addStore(Store store);
+    Store queryUniqueOne(Map<String,Object> param);
     void modifyCommodity(Commodity commodity);
     void deleteCommodityById(Integer commodityId);
 }

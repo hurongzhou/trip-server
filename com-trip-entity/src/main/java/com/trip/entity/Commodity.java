@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Commodity implements Serializable{
 
+
     private Integer commodityId;
 
     private String commodityName;
@@ -16,6 +17,8 @@ public class Commodity implements Serializable{
     private Integer monthlySales;
 
     private Integer storeId;
+
+    private List<String> imageUrls;
 
     private String expContent1;
 
@@ -32,6 +35,14 @@ public class Commodity implements Serializable{
 
     public String getCommodityName() {
         return commodityName;
+    }
+
+    public List<String> getImageUrls() {
+        return imageUrls;
+    }
+
+    public void setImageUrls(List<String> imageUrls) {
+        this.imageUrls = imageUrls;
     }
 
     /**

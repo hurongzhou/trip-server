@@ -22,18 +22,38 @@ public class RestaurantService {
     @Resource
     DishesService dishesService;
     @Resource
+    ImageService imageService;
+    @Resource
     RedisUtil redisUtil;
+
+
+
+    public boolean register(Restaurant restaurant){
+        Map<String,Object> param=new HashMap();
+        param.put("loginName",restaurant.getLoginName());
+        Restaurant r=restaurantDao.queryUniqueOne(param);
+        if (r!=null){
+            return false;
+        }
+        restaurantDao.insertSelective(restaurant);
+        return true;
+    }
 
     public Restaurant login(String loginName,String password){
         Map<String,Object> param=new HashMap();
         param.put("loginName",loginName);
         param.put("password",password);
-        Restaurant restaurant=restaurantDao.login(param);
+        Restaurant restaurant=restaurantDao.queryUniqueOne(param);
         return restaurant;
     }
 
     public List<Restaurant> queryRestaurantByCondition(Map<String,Object> param){
-        return restaurantDao.selectRestaurantByCondition(param);
+        List<Restaurant> restaurantList=restaurantDao.selectRestaurantByCondition(param);
+        for (Restaurant r:restaurantList){
+            List<String> urls=imageService.queryImageUrlsByForeignId("restaurantId",r.getRestaurantId());
+            r.setIamgeUrls(urls);
+        }
+        return restaurantList;
     }
 
     public List<Dishes> queryDishes(Integer restaurantId){

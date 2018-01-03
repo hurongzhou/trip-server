@@ -25,10 +25,13 @@
     from tb_restaurant
     where restaurant_id = #{restaurantId,jdbcType=INTEGER}
   </select>
-  <select id="login" parameterType="Map" resultType="Restaurant">
+  <select id="queryUniqueOne" parameterType="Map" resultType="Restaurant">
     select
     <include refid="Base_Column_List"/>
-    from tb_restaurant where login_name=#{loginName} and password=#{password}
+    from tb_restaurant where login_name=#{loginName}
+    <if test="password!=null">
+      and password=#{password}
+    </if>
   </select>
   <select id="selectRestaurantByCondition" parameterType="Map" resultMap="BaseResultMap" resultType="List">
     select

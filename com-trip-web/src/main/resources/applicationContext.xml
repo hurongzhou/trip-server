@@ -38,7 +38,7 @@
             <map key-type="java.lang.String">
                 <!-- 这个key需要和DynamicDatasourceHolder的key一致 -->
                 <entry key="master" value-ref="masterDataSource"/>
-                <entry key="slave" value-ref="slaveDataSource"/>
+                <entry key="slave" value-ref="masterDataSource"/>
             </map>
         </property>
         <!-- 设置默认的数据源，这里默认走写库 -->

@@ -18,7 +18,7 @@ public interface RestaurantDao {
 
     int updateByPrimaryKey(Restaurant record);
 
-    Restaurant login(Map<String,Object> param);
+    Restaurant queryUniqueOne(Map<String,Object> param);
 
     List<Restaurant> selectRestaurantByCondition(Map<String,Object> param);
 }

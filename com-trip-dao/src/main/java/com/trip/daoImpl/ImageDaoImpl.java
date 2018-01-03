@@ -6,6 +6,8 @@ import com.trip.mapper.ImageMapper;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
+import java.util.List;
+import java.util.Map;
 
 @Repository
 public class ImageDaoImpl implements ImageDao{
@@ -41,5 +43,10 @@ public class ImageDaoImpl implements ImageDao{
     @Override
     public int updateByPrimaryKey(Image record) {
         return 0;
+    }
+
+    @Override
+    public List<String> queryByForeignKey(Map<String, Object> param) {
+        return imageMapper.queryByForeignKey(param);
     }
 }

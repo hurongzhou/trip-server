@@ -17,9 +17,16 @@ public class StoreService {
 
     @Resource
     StoreDao storeDao;
+    @Resource
+    ImageService imageService;
 
-    public List<Commodity> findCommoditiesByCondition(Commodity commodity){
-        return storeDao.findCommoditiesByCondition(commodity);
+    public List<Commodity> findCommoditiesByCondition(Commodity commodity) {
+        List<Commodity> commodityList=storeDao.findCommoditiesByCondition(commodity);
+        for (Commodity c:commodityList){
+            List<String> urls=imageService.queryImageUrlsByForeignId("commodityId",c.getCommodityId());
+            c.setImageUrls(urls);
+        }
+        return commodityList;
     }
 
     public void addCommodity(List<Commodity> commodities){
@@ -28,11 +35,22 @@ public class StoreService {
         }
     }
 
+    public boolean register(Store store){
+        Map<String,Object> param=new HashMap();
+        param.put("loginName",store.getLoginName());
+        Store s=storeDao.queryUniqueOne(param);
+        if (s!=null){
+            return false;
+        }
+        storeDao.addStore(store);
+        return true;
+    }
+
     public Store login(String loginName, String password){
         Map<String,Object> param=new HashMap();
         param.put("loginName",loginName);
         param.put("password",password);
-        Store store=storeDao.login(param);
+        Store store=storeDao.queryUniqueOne(param);
         return store;
     }
 

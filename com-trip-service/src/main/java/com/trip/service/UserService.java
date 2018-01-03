@@ -3,10 +3,7 @@ package com.trip.service;
 import com.trip.common.redis.RedisConstant;
 import com.trip.common.redis.RedisUtil;
 import com.trip.dao.UserDao;
-import com.trip.entity.Dishes;
-import com.trip.entity.Restaurant;
-import com.trip.entity.RestaurantAndDishes;
-import com.trip.entity.User;
+import com.trip.entity.*;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -21,6 +18,8 @@ public class UserService {
     RestaurantService restaurantService;
     @Resource
     DishesService dishesService;
+    @Resource
+    ViewpointService viewpointService;
     @Resource
     RedisUtil redisUtil;
 
@@ -51,6 +50,7 @@ public class UserService {
 
     public List<RestaurantAndDishes> searchRestaurantAndDishes(String keyWord,String areaCode){
         final String key="search_restaurant_dishes_"+keyWord;
+        redisUtil.del(key);
         List<RestaurantAndDishes> resultList=(List<RestaurantAndDishes>) redisUtil.get(key);
         if (resultList!=null){
             return resultList;
@@ -89,5 +89,10 @@ public class UserService {
         }
         redisUtil.set(key,resultList,RedisConstant.buildExp());
         return resultList;
+    }
+
+    public List<Viewpoint> searchViewPoints(String keyword){
+        List<Viewpoint> viewpoints=viewpointService.searchByKeyword(keyword);
+        return viewpoints;
     }
 }

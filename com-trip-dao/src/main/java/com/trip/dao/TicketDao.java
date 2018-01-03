@@ -1,10 +1,10 @@
-package com.trip.mapper;
+package com.trip.dao;
 
 import com.trip.entity.Ticket;
 
 import java.util.List;
 
-public interface TicketMapper {
+public interface TicketDao {
 
     int deleteByPrimaryKey(Integer ticketId);
 

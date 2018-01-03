@@ -14,13 +14,20 @@ public class DishesService {
 
     @Resource
     DishesDao dishesDao;
+    @Resource
+    ImageService imageService;
 
     public List<Dishes> queryByCondition(String keyWord,List<Integer> restaurantIds,String areaCode){
         Map<String,Object> param=new HashMap();
         param.put("dishesName",keyWord);
         param.put("restaurantIdList",restaurantIds);
         param.put("areaCode",areaCode);
-        return dishesDao.queryByCondition(param);
+        List<Dishes> dishesList=dishesDao.queryByCondition(param);
+        for (Dishes dishes:dishesList){
+            List<String> urls=imageService.queryImageUrlsByForeignId("dishesId",dishes.getDishesId());
+            dishes.setImageUrls(urls);
+        }
+        return dishesList;
     }
 
     public void addDishesList(List<Dishes> dishesList,Integer restaurantId){

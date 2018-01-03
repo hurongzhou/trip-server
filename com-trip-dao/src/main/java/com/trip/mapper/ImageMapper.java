@@ -1,6 +1,10 @@
 package com.trip.mapper;
 
+import com.sun.tools.corba.se.idl.StringGen;
 import com.trip.entity.Image;
+
+import java.util.List;
+import java.util.Map;
 
 public interface ImageMapper {
 
@@ -15,4 +19,6 @@ public interface ImageMapper {
     int updateByPrimaryKeySelective(Image record);
 
     int updateByPrimaryKey(Image record);
+
+    List<String> queryByForeignKey(Map<String,Object> param);
 }

@@ -34,6 +34,12 @@
     from tb_ticket
     where ticket_id = #{ticketId,jdbcType=INTEGER}
   </select>
+  <select id="searchByViewpointID" parameterType="Integer" resultMap="BaseResultMap" resultType="List">
+    select
+    <include refid="Base_Column_List"/>
+    from tb_ticket
+    where viewpoint_id=#{viewppointId}
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     <!--
       WARNING - @mbggenerated

@@ -1,11 +1,11 @@
-package com.trip.mapper;
+package com.trip.dao;
 
 import com.trip.entity.Viewpoint;
 
 import java.util.List;
 import java.util.Map;
 
-public interface ViewpointMapper {
+public interface ViewpointDao {
 
     int deleteByPrimaryKey(Integer viewpointId);
 
@@ -19,5 +19,5 @@ public interface ViewpointMapper {
 
     int updateByPrimaryKey(Viewpoint record);
 
-    List<Viewpoint>  searchByKeyword(Map<String,Object> param);
+    List<Viewpoint> searchByKeyword(Map<String,Object> param);
 }

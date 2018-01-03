@@ -2,6 +2,9 @@ package com.trip.dao;
 
 import com.trip.entity.Image;
 
+import java.util.List;
+import java.util.Map;
+
 public interface ImageDao {
 
     int deleteByPrimaryKey(Integer imageId);
@@ -15,4 +18,6 @@ public interface ImageDao {
     int updateByPrimaryKeySelective(Image record);
 
     int updateByPrimaryKey(Image record);
+
+    List<String> queryByForeignKey(Map<String,Object> param);
 }

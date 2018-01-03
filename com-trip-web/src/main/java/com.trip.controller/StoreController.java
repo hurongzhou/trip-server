@@ -2,7 +2,6 @@ package com.trip.controller;
 
 import com.trip.common.APITripResult;
 import com.trip.entity.Commodity;
-import com.trip.entity.Restaurant;
 import com.trip.entity.Store;
 import com.trip.service.StoreService;
 import org.apache.log4j.Logger;
@@ -23,6 +22,33 @@ public class StoreController {
     @Resource
     StoreService storeService;
 
+
+    @RequestMapping("register.json")
+    @ResponseBody
+    public APITripResult register(@RequestBody Store store){
+        APITripResult api=new APITripResult();
+        try {
+            if (store==null){
+                api.setMassage("注册的信息为空！");
+                api.setStatus(APITripResult.SYSTEM_ERROR);
+                return api;
+            }
+            boolean success=storeService.register(store);
+            if (!success){
+                api.setMassage("登录名已存在！");
+                api.setStatus(APITripResult.SYSTEM_ERROR);
+            }else {
+                api.setMassage("注册成功！");
+                api.setStatus(APITripResult.SUCCESS);
+            }
+        }catch (Exception e){
+            logger.error(e);
+            e.printStackTrace();
+            api.setMassage(e.getMessage());
+            api.setStatus(APITripResult.SYSTEM_ERROR);
+        }
+        return api;
+    }
 
     @RequestMapping("login.json")
     @ResponseBody

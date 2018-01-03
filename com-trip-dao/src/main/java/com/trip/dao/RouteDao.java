@@ -1,10 +1,11 @@
-package com.trip.mapper;
+package com.trip.dao;
 
 import com.trip.entity.Route;
 
 import java.util.List;
 
-public interface RouteMapper {
+public interface RouteDao {
+
 
     int deleteByPrimaryKey(Integer routeId);
 
@@ -19,4 +20,5 @@ public interface RouteMapper {
     int updateByPrimaryKey(Route record);
 
     List<Route> searchByViewpointId(Integer viewpointId);
+
 }
