@@ -17,12 +17,12 @@ public class DishesDaoImpl implements DishesDao{
 
     @Override
     public int deleteByPrimaryKey(Integer dishesId) {
-        return 0;
+        return dishesMapper.deleteByPrimaryKey(dishesId);
     }
 
     @Override
     public int insert(Dishes record) {
-        return 0;
+        return dishesMapper.insert(record);
     }
 
     @Override
@@ -32,17 +32,17 @@ public class DishesDaoImpl implements DishesDao{
 
     @Override
     public Dishes selectByPrimaryKey(Integer dishesId) {
-        return null;
+        return dishesMapper.selectByPrimaryKey(dishesId);
     }
 
     @Override
     public int updateByPrimaryKeySelective(Dishes record) {
-        return 0;
+        return updateByPrimaryKeySelective(record);
     }
 
     @Override
     public int updateByPrimaryKey(Dishes record) {
-        return 0;
+        return dishesMapper.updateByPrimaryKey(record);
     }
 
     @Override

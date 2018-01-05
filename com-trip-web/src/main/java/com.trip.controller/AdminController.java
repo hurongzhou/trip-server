@@ -1,6 +1,7 @@
 package com.trip.controller;
 
 import com.trip.common.APITripResult;
+import com.trip.common.StringUtil;
 import com.trip.entity.Admin;
 import com.trip.entity.User;
 import com.trip.service.AdminService;
@@ -33,7 +34,7 @@ public class AdminController {
             param.put("password",password);
             Admin admin=adminService.login(param);
             if (admin!=null){
-                request.getSession().setAttribute("admin",admin);
+                request.getSession().setAttribute(StringUtil.CURERENT_USER,admin);
                 api.setResult(admin);
                 api.setMassage("登录成功！");
                 api.setStatus(APITripResult.SUCCESS);

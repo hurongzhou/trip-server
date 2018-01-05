@@ -49,4 +49,9 @@ public class ViewpointDaoImpl implements ViewpointDao{
     public List<Viewpoint> searchByKeyword(Map<String, Object> param) {
         return viewpointMapper.searchByKeyword(param);
     }
+
+    @Override
+    public List<Viewpoint> queryAll() {
+        return viewpointMapper.queryAll();
+    }
 }

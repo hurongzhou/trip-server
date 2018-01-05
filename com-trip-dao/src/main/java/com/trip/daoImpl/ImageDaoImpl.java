@@ -17,12 +17,12 @@ public class ImageDaoImpl implements ImageDao{
 
     @Override
     public int deleteByPrimaryKey(Integer imageId) {
-        return 0;
+        return imageMapper.deleteByPrimaryKey(imageId);
     }
 
     @Override
     public int insert(Image record) {
-        return 0;
+        return imageMapper.insert(record);
     }
 
     @Override
@@ -32,17 +32,17 @@ public class ImageDaoImpl implements ImageDao{
 
     @Override
     public Image selectByPrimaryKey(Integer imageId) {
-        return null;
+        return imageMapper.selectByPrimaryKey(imageId);
     }
 
     @Override
     public int updateByPrimaryKeySelective(Image record) {
-        return 0;
+        return imageMapper.updateByPrimaryKeySelective(record);
     }
 
     @Override
     public int updateByPrimaryKey(Image record) {
-        return 0;
+        return updateByPrimaryKey(record);
     }
 
     @Override

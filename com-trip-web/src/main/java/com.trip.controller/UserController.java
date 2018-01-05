@@ -3,6 +3,7 @@ package com.trip.controller;
 import com.trip.common.APITripResult;
 import com.trip.entity.RestaurantAndDishes;
 import com.trip.entity.User;
+import com.trip.entity.Viewpoint;
 import com.trip.service.UserService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
@@ -102,6 +103,24 @@ public class UserController {
             }
             List<RestaurantAndDishes> rdList=userService.searchRestaurantAndDishes(keyWord,areaCode);
             api.setResult(rdList);
+            api.setMassage("操作成功！");
+            api.setStatus(APITripResult.SUCCESS);
+        }catch (Exception e){
+            logger.error(e);
+            e.printStackTrace();
+            api.setMassage(e.getMessage());
+            api.setStatus(APITripResult.SYSTEM_ERROR);
+        }
+        return api;
+    }
+
+    @RequestMapping("searchViewpointByKeyword.json")
+    @ResponseBody
+    public APITripResult searchViewpointByKeyword(String keyword){
+        APITripResult api=new APITripResult();
+        try {
+            List<Viewpoint> viewpoints=userService.searchViewPoints(keyword);
+            api.setResult(viewpoints);
             api.setMassage("操作成功！");
             api.setStatus(APITripResult.SUCCESS);
         }catch (Exception e){

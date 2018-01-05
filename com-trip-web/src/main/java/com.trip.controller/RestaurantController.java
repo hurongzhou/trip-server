@@ -1,6 +1,7 @@
 package com.trip.controller;
 
 import com.trip.common.APITripResult;
+import com.trip.common.StringUtil;
 import com.trip.entity.Dishes;
 import com.trip.entity.Restaurant;
 import com.trip.service.RestaurantService;
@@ -12,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 import java.util.Map;
 
@@ -56,7 +59,7 @@ public class RestaurantController {
 
     @RequestMapping("login.json")
     @ResponseBody
-    public APITripResult login(String loginName,String password){
+    public APITripResult login(String loginName, String password, HttpServletRequest request){
         APITripResult api=new APITripResult();
         try {
             if (loginName==null||loginName.equals("")
@@ -68,6 +71,7 @@ public class RestaurantController {
                 api.setMassage("用户名或密码错误！");
                 api.setStatus(APITripResult.SYSTEM_ERROR);
             }else {
+                request.getSession().setAttribute(StringUtil.CURERENT_USER,restaurant);
                 api.setMassage("登陆成功！");
                 api.setStatus(APITripResult.SUCCESS);
             }
