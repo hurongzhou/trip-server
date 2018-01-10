@@ -6,7 +6,6 @@ import com.trip.dao.RestaurantDao;
 import com.trip.entity.Dishes;
 import com.trip.entity.Restaurant;
 import org.springframework.stereotype.Service;
-import sun.security.krb5.internal.PAData;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -51,7 +50,7 @@ public class RestaurantService {
         List<Restaurant> restaurantList=restaurantDao.selectRestaurantByCondition(param);
         for (Restaurant r:restaurantList){
             List<String> urls=imageService.queryImageUrlsByForeignId("restaurantId",r.getRestaurantId());
-            r.setIamgeUrls(urls);
+            r.setImageUrls(urls);
         }
         return restaurantList;
     }
@@ -67,6 +66,13 @@ public class RestaurantService {
         dishesList=dishesService.queryByCondition(null,ids,null);
         redisUtil.set(key,dishesList, RedisConstant.buildExp());
         return dishesList;
+    }
+
+    public Restaurant queryRestaurantById(Integer restaurantId){
+        Restaurant restaurant=restaurantDao.selectByPrimaryKey(restaurantId);
+        List<Dishes> dishesList=queryDishes(restaurantId);
+        restaurant.setDishesList(dishesList);
+        return restaurant;
     }
 
     public void addDishesList(List<Dishes> dishesList,Integer restaurantId){

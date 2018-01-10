@@ -1,9 +1,7 @@
 package com.trip.controller;
 
 import com.trip.common.APITripResult;
-import com.trip.entity.RestaurantAndDishes;
-import com.trip.entity.User;
-import com.trip.entity.Viewpoint;
+import com.trip.entity.*;
 import com.trip.service.UserService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
@@ -30,6 +28,13 @@ public class UserController {
     @Resource
     UserService userService;
 
+    /**
+     * 用户登录
+     * @param loginName 登录名
+     * @param password 密码
+     * @param request
+     * @return
+     */
     @RequestMapping("login.json")
     @ResponseBody
     public APITripResult login(String loginName, String password, HttpServletRequest request){
@@ -55,6 +60,12 @@ public class UserController {
         return api;
     }
 
+    /**
+     * 添加用户
+     * @param users  用户集合
+     * @param request
+     * @return
+     */
     @RequestMapping("addList.json")
     @ResponseBody
     public APITripResult addUserList(@RequestBody List<User> users, HttpServletRequest request){
@@ -73,6 +84,11 @@ public class UserController {
         return api;
     }
 
+
+    /**
+     * 查询所有的用户
+     * @return
+     */
     @RequestMapping("queryAll.json")
     @ResponseBody
     public APITripResult queryAll(){
@@ -92,6 +108,12 @@ public class UserController {
         return api;
     }
 
+    /**
+     * 关键字搜索餐厅和菜品
+     * @param keyWord  关键字
+     * @param areaCode 地区号
+     * @return
+     */
     @RequestMapping("searchRestaurantAndDishes.json")
     @ResponseBody
     public APITripResult searchRestaurantAndDishes(String keyWord,String areaCode){
@@ -101,7 +123,7 @@ public class UserController {
             if (area==null){
                 throw new Exception("您选择的地区未开通！");
             }
-            List<RestaurantAndDishes> rdList=userService.searchRestaurantAndDishes(keyWord,areaCode);
+            List<Restaurant> rdList=userService.searchRestaurantAndDishes(keyWord,areaCode);
             api.setResult(rdList);
             api.setMassage("操作成功！");
             api.setStatus(APITripResult.SUCCESS);
@@ -114,6 +136,57 @@ public class UserController {
         return api;
     }
 
+    /**
+     *通过id获取餐馆的详细信息
+     * @param restaurantId 获取餐馆
+     * @return
+     */
+    @RequestMapping("queryRestaurantById.json")
+    @ResponseBody
+    public APITripResult getRestaurantDetailById(Integer restaurantId){
+        APITripResult api=new APITripResult();
+        try {
+            Restaurant restaurant=userService.getRestaurantDetailById(restaurantId);
+            api.setResult(restaurant);
+            api.setMassage("操作成功！");
+            api.setStatus(APITripResult.SUCCESS);
+        }catch (Exception e){
+            logger.error(e);
+            e.printStackTrace();
+            api.setMassage(e.getMessage());
+            api.setStatus(APITripResult.SYSTEM_ERROR);
+        }
+        return api;
+    }
+
+    /**
+     * 根据id获取菜品的详细信息
+     * @param dishesId 菜品id
+     * @return
+     */
+    @RequestMapping("getDishesById.json")
+    @ResponseBody
+    public APITripResult getDishesDetailById(Integer dishesId){
+        APITripResult api=new APITripResult();
+        try {
+            Dishes dishes=userService.getDishesDetailById(dishesId);
+            api.setResult(dishes);
+            api.setMassage("操作成功！");
+            api.setStatus(APITripResult.SUCCESS);
+        }catch (Exception e){
+            logger.error(e);
+            e.printStackTrace();
+            api.setMassage(e.getMessage());
+            api.setStatus(APITripResult.SYSTEM_ERROR);
+        }
+        return api;
+    }
+
+    /**
+     * 关键字搜索景点
+     * @param keyword 关键字
+     * @return
+     */
     @RequestMapping("searchViewpointByKeyword.json")
     @ResponseBody
     public APITripResult searchViewpointByKeyword(String keyword){

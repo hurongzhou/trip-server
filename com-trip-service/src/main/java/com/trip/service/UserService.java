@@ -48,10 +48,10 @@ public class UserService {
         return users;
     }
 
-    public List<RestaurantAndDishes> searchRestaurantAndDishes(String keyWord,String areaCode){
+    public List<Restaurant> searchRestaurantAndDishes(String keyWord,String areaCode){
         final String key="search_restaurant_dishes_"+keyWord;
         redisUtil.del(key);
-        List<RestaurantAndDishes> resultList=(List<RestaurantAndDishes>) redisUtil.get(key);
+        List<Restaurant> resultList=(List<Restaurant>) redisUtil.get(key);
         if (resultList!=null){
             return resultList;
         }
@@ -76,19 +76,25 @@ public class UserService {
         List<Dishes> newDishes=dishesService.queryByCondition(null,newIds,null);
 
         for (Restaurant r:restaurantList){
-            RestaurantAndDishes rd=new RestaurantAndDishes();
-            rd.setRestaurant(r);
             List<Dishes> dishesOfR=new ArrayList();
             for (Dishes d:newDishes){
                 if (r.getRestaurantId()==d.getRestaurantId()){
                     dishesOfR.add(d);
                 }
             }
-            rd.setDishesList(dishesOfR);
-            resultList.add(rd);
+            r.setDishesList(dishesOfR);
+            resultList.add(r);
         }
         redisUtil.set(key,resultList,RedisConstant.buildExp());
         return resultList;
+    }
+
+    public Restaurant getRestaurantDetailById(Integer restaurantId){
+        return restaurantService.queryRestaurantById(restaurantId);
+    }
+
+    public Dishes getDishesDetailById(Integer dishesId){
+        return dishesService.queryDishesById(dishesId);
     }
 
     public List<Viewpoint> searchViewPoints(String keyword){

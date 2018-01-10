@@ -37,4 +37,8 @@ public class DishesService {
         }
     }
 
+    public Dishes  queryDishesById(Integer dishesId){
+        return dishesDao.selectByPrimaryKey(dishesId);
+    }
+
 }
